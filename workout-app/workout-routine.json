@@ -1,0 +1,56 @@
+{
+  "WorkoutRoutinesForEachGoal": {
+    "Goal (ex: if you want to build muscle": {
+      "A routine for goal type 1 (ex leg day for building muscle)": [
+        {
+          "name": "workout 1",
+          "img": null
+        },
+        {
+          "name": "workout 2",
+          "img": null
+        }
+      ],
+      "Another routine for goal type 1 (ex back and biceps for building muscle)": [
+        {
+          "name": "workout 1",
+          "img": null
+        }
+      ]
+    },
+    "A different Goal (for example loosing weight)": {
+      "A routine for goal type 2 (ex leg day for loosing weight)": [
+        {
+          "name": "workout 1",
+          "img": null
+        },
+        {
+          "name": "workout 2",
+          "img": null
+        }
+      ],
+      "Another routine for goal type 2 (ex back and biceps for loosign weight)": [
+        {
+          "name": "workout 1",
+          "img": null
+        }
+      ]
+    }
+  },
+  "Accounts": [
+    {
+      "id": 1,
+      "Username": "catlover55",
+      "Password": "1234",
+      "FormCompleted": false,
+      "data":{
+        "age": null,
+        "weight": null,
+        "height": null,
+        "BMI": null,
+        "goals": null
+      }
+      
+    }
+  ]
+}
