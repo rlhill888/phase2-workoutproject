@@ -5,16 +5,26 @@ import Login from './Login';
  
 
 function App() {
-//   useEffect(() => {
-//     fetch('http://localhost:3000/Accounts')
-//     .then((resp) => resp.json())
-//     .then((data) => console.log(data))
-//   }, [])
-  
+  const [userAccounts, setUserAccounts]= useState([])
+  useEffect(() => {
+    fetch('http://localhost:3001/Accounts')
+    .then((resp) => resp.json())
+    .then((data) =>{ 
+      return setUserAccounts(data)})
+  }, [])
   const [logInStatus, setLogInStatus]= useState(false)
   const [showNewUserTab, setShowNewUserTab]= useState(false)
+  const [currentUser, setCurrentUser]= useState('')
   return (
-    <Login logInStatus ={logInStatus} setLogInStatus={setLogInStatus} setShowNewUserTab={setShowNewUserTab} showNewUserTab={showNewUserTab}/>
+    <Login 
+    userAccounts= {userAccounts} 
+    logInStatus ={logInStatus} 
+    setLogInStatus={setLogInStatus} 
+    setShowNewUserTab={setShowNewUserTab} 
+    setUserAccounts={setUserAccounts}
+    showNewUserTab={showNewUserTab}
+    setCurrentUser={setCurrentUser}
+    currentUser={currentUser}/>
   )
 }
 

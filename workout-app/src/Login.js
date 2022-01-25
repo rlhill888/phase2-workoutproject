@@ -3,15 +3,46 @@ import MainPage from "./MainPage";
 
 
 
-function Login({logInStatus, setLogInStatus, showNewUserTab, setShowNewUserTab  }){
+function Login({logInStatus, 
+    setLogInStatus, 
+    showNewUserTab, 
+    setShowNewUserTab, 
+    userAccounts,
+    currentUser,
+    setUserAccounts, 
+    setCurrentUser  }){
+    
+    const [logInUserName, setLogInUserName]= useState('')
+    const [logInPassword, setLogInPassword]= useState('')
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
 
-    function hanldeLogIn(){
-        return setLogInStatus(true), setShowNewUserTab(false)
+    function hanldeLogIn(e){
+
+        e.preventDefault()
+        //filter through our array of user accounts, 
+        
+        const attemptedAccountAcess= userAccounts.filter(account =>{
+            return account.Username === logInUserName && account.Password === logInPassword
+        })
+
+        if(attemptedAccountAcess.length === 1){
+
+            return setLogInStatus(true), setShowNewUserTab(false), setCurrentUser(attemptedAccountAcess[0]), setLogInPassword(''), setLogInUserName('')
+
+        }
+        if(attemptedAccountAcess.length === 0){
+            console.log("Incorrect user name or password please try again")
+        }
+        // return console.log(attemptedAccountAcess.length)
+        
+        //if user 
+        // and password equals one inside of account array
+        // user goes into the next tab, update current user state
+        
     }
     function handleLogOut(){
-        return setLogInStatus(false), setShowNewUserTab(false)
+        return setLogInStatus(false), setShowNewUserTab(false), setCurrentUser('')
     }
     function handleNewUserButton(){
         return setShowNewUserTab(true)
@@ -21,8 +52,16 @@ function Login({logInStatus, setLogInStatus, showNewUserTab, setShowNewUserTab  
         e.preventDefault()
         const newAccount= { 
             Username: newUserName,
-            Password: newPassword
+            Password: newPassword,
+            FormCompleted: false,
+            data: {
+                age: null,
+                weight: null,
+                height: null,
+                BMI: null,
+                goals: null
         }
+    }
         
         fetch('http://localhost:3001/Accounts', {
             method:'POST',
@@ -45,6 +84,14 @@ function Login({logInStatus, setLogInStatus, showNewUserTab, setShowNewUserTab  
     }
     function handleNewPasswordChange(e){
         return setNewPassword(e.target.value), console.log(newPassword)
+    }
+    function handleLoginUserName(e){
+        return setLogInUserName(e.target.value)
+        
+    }
+    function handleLoginPassword(e){
+        return setLogInPassword(e.target.value)
+
     }
 
 if(logInStatus===false && showNewUserTab=== true){
@@ -73,9 +120,9 @@ if(logInStatus===false){
       <fieldset>
          <label>
            <p>Username:</p>
-           <input type= "email" />
+           <input onChange={handleLoginUserName} type= "text" />
            <p>Password:</p>
-           <input type= "password"/>
+           <input onChange= {handleLoginPassword} type= "password"/>
          </label>
        </fieldset>
        <button onClick= {hanldeLogIn} type="submit">Log In</button>
@@ -92,7 +139,7 @@ if(logInStatus===false){
 if(logInStatus===true){
     return ( <> 
     <button onClick={handleLogOut}>Log Out</button>
-    <MainPage />
+    <MainPage currentUser={currentUser} />
     
     </>)
 }

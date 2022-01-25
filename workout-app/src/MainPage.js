@@ -4,14 +4,14 @@ import Login from "./Login";
 import WorkoutSchedule from "./WorkoutSchedule";
 
 
-function MainPage(){
+function MainPage({currentUser}){
 
     const [logInStatus, setLogInStatus]= useState(false)
     return(
         <>
-    <h1>this da main page</h1>
-    <FormQuestions />
-    <WorkoutSchedule />
+    <h1>{`Welcome ${currentUser.Username}`}</h1>
+    <FormQuestions currentUser={currentUser} />
+    <WorkoutSchedule currentUser={currentUser}/>
     {/* <MealPlan /> */}
     </>
     )

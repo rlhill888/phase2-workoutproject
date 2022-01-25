@@ -1,6 +1,10 @@
 import React from "react";
 
-function FormQuestions(){
+function FormQuestions({currentUser}){
+    function handleSubmit(){
+        
+    }
+    if(currentUser.FormCompleted=== false){
     return(
         <>
         <h2>Answer These Questions So We Can Figure Out The Best Workout Plan For You</h2>
@@ -32,6 +36,12 @@ function FormQuestions(){
         </form>
         </>
     )
+    }
+    if(currentUser.FormCompleted===true){
+        return( <> <p>hi</p></>)
+    }
+ 
+    
 }
 
 export default FormQuestions;
