@@ -43,14 +43,18 @@
       "Username": "catlover55",
       "Password": "1234",
       "FormCompleted": false,
-      "data":{
+      "data": {
         "age": null,
         "weight": null,
         "height": null,
         "BMI": null,
         "goals": null
       }
-      
+    },
+    {
+      "Username": "5423",
+      "Password": "43h6453",
+      "id": 2
     }
   ]
 }

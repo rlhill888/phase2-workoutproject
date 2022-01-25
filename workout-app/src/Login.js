@@ -19,25 +19,25 @@ function Login({logInStatus, setLogInStatus, showNewUserTab, setShowNewUserTab  
     
     function handleCreateAccountButton(e){
         e.preventDefault()
-        // const newAccount= { 
-        //     Username: newUserName,
-        //     Password: newPassword
-        // }
+        const newAccount= { 
+            Username: newUserName,
+            Password: newPassword
+        }
         
-        // fetch('http://localhost:3000/Accounts', {
-        //     method:'POST',
-        //     headers:{
-        //         'Content-Type':'application/json'
-        //     },
-        //     body: JSON.stringify(newAccount)
-        // })
-        // .then(res => res.json())
-        // .then(data =>{ 
-        //     console.log(newAccount)
-        //     setNewUserName('')
-        //     setNewPassword('')
+        fetch('http://localhost:3001/Accounts', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(newAccount)
+        })
+        .then(res => res.json())
+        .then(data =>{ 
+            console.log(newAccount)
+            setNewUserName('')
+            setNewPassword('')
         
-        // })
+        })
         return setShowNewUserTab(false)
     }
     function handleNewUserNameChange(e){

@@ -15,15 +15,15 @@ function FormQuestions(){
             <label name= "Height Question"/> What is your height in Feet? <label/>
             <input name= "Height Question" type="number" placeholder="Height in feet" />
             <br/>
-            <label name ="goals" for="goals"/> What are your goals for working out? <label/>
+            <label name ="goals" /> What are your goals for working out? <label/>
             <br/>
-            <input name ="goals" for="goals" type="radio"/> To Gain Overall Weight
+            <input name ="goals"  type="radio"/> To Gain Overall Weight
             <br/>
-            <input name ="goals" for="goals" type="radio"/> To Loose Overall Weight
+            <input name ="goals"  type="radio"/> To Loose Overall Weight
             <br />
-            <input name ="goals" for="goals" type="radio"/> To gain muscle mass
+            <input name ="goals"  type="radio"/> To gain muscle mass
             <br/>
-            <input name ="goals" for="goals" type="radio"/> To Tone muscles and get muscle definition 
+            <input name ="goals"  type="radio"/> To Tone muscles and get muscle definition 
             <br/>
             <p>Based on the answers to these questions we will make a customized workout and meal plan catered to you.</p>
             <input type="submit" value="Click to get see your workout routines"/>
