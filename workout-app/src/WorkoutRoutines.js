@@ -2,11 +2,11 @@ import React from "react";
 import WorkOutCard from "./WorkOutCard";
 
 
-function WorkoutRoutines({routineName}){
+function WorkoutRoutines({name}){
 
     return(
         <>
-        <h2>Routine Name: (Routine Name PlaceHolder)</h2>
+        <h2>Routine Name: {name}</h2>
         Routine Img: <img />
         <div> 
         <WorkOutCard />
