@@ -1,7 +1,26 @@
 import React, {useState, useEffect} from "react";
 import MainPage from "./MainPage";
+import styled from "styled-components";
+import "./index.css";
 
+const Button = styled.button`
+    background: black;
+    border-color: white;
+    color: white;
+    font-size: 16px;
+`;
 
+// const H1 = styled.h1`
+//     text-family: monospace;
+// `
+
+// const Input = styled.input`
+//     padding: 0.5em;
+//     margin: 0.5em;
+//     color: ${props => props.inputColor || "red"};
+//     background: green;
+//     border: none;border
+// `;
 
 function Login({logInStatus, 
     setLogInStatus, 
@@ -98,12 +117,12 @@ function Login({logInStatus,
 
 if(logInStatus===false && showNewUserTab=== true){
 return(<> 
-<h1>Create a New Account</h1>
+<h2>Create a New Account</h2>
 <form>
-    <label name="createNewUserName"/> User Name: <label/>
+    <label name="createNewUserName" /> User Name: <label/>
     <input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
     <br/>
-    <label name="createNewPassword"/> Password: <label/>
+    <label name="createNewPassword" /> Password: <label/>
     <input onChange={handleNewPasswordChange}type="password" name="createPassword" />
     <br/>
     <input onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
@@ -117,22 +136,23 @@ if(logInStatus===false){
     return(
         <>
         <div className="wrapper">
-      <h1>Welcome to whatever our site is called</h1>
+      <h1>Workout 4 Me</h1>
+      <h2>The expertise you need to achieve your fitness goals</h2>
       <form>
-      <fieldset>
          <label>
            <p>Username:</p>
            <input onChange={handleLoginUserName} type= "text" />
            <p>Password:</p>
            <input onChange= {handleLoginPassword} type= "password"/>
          </label>
-       </fieldset>
-       <button onClick= {hanldeLogIn} type="submit">Log In</button>
-      </form>
+         </form>
+       <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
+
+      
     </div>
     <div>
         <h2>New User?</h2>
-        <button onClick={handleNewUserButton}>I am a new User</button>
+        <Button onClick={handleNewUserButton}>Sign Up</Button>
          </div>
     </>
     
@@ -140,7 +160,7 @@ if(logInStatus===false){
 }
 if(logInStatus===true){
     return ( <> 
-    <button onClick={handleLogOut}>Log Out</button>
+    <Button onClick={handleLogOut}>Log Out</Button>
     <MainPage currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     
     </>)

@@ -5,9 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: black;
+  background-image: url("../photos/gym-time-exercise.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 175px;
+  text-align: center;
+  text-shadow: 10px 10px 20px black;
+
+}
+
+h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 10px 10px 20px black;
+
+}
+
+input {
+  background-color: black;
+  border-color: white;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
