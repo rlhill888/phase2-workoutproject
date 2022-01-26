@@ -8,7 +8,13 @@ if(currentUser.FormCompleted === true){
 
 return(
     <>
+    <h2>Here are your workout routines:</h2>
     <WorkoutRoutines />
+    <WorkoutRoutines />
+    <WorkoutRoutines />
+    <WorkoutRoutines />
+    <WorkoutRoutines />
+    
     <WorkoutRoutineTrackerForm />
      </>
 )
@@ -16,7 +22,8 @@ return(
 if(currentUser.FormCompleted === false){
     return(
         <>
-
+        
+        
         </>
 
 

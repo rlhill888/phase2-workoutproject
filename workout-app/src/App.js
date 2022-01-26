@@ -6,15 +6,15 @@ import Login from './Login';
 
 function App() {
   const [userAccounts, setUserAccounts]= useState([])
+  const [logInStatus, setLogInStatus]= useState(false)
+  const [showNewUserTab, setShowNewUserTab]= useState(false)
+  const [currentUser, setCurrentUser]= useState('')
   useEffect(() => {
     fetch('http://localhost:3001/Accounts')
     .then((resp) => resp.json())
     .then((data) =>{ 
       return setUserAccounts(data)})
-  }, [])
-  const [logInStatus, setLogInStatus]= useState(false)
-  const [showNewUserTab, setShowNewUserTab]= useState(false)
-  const [currentUser, setCurrentUser]= useState('')
+  },[logInStatus,showNewUserTab,currentUser])
   return (
     <Login 
     userAccounts= {userAccounts} 

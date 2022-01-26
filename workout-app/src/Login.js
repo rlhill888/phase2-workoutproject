@@ -12,10 +12,12 @@ function Login({logInStatus,
     setUserAccounts, 
     setCurrentUser  }){
     
+    
     const [logInUserName, setLogInUserName]= useState('')
     const [logInPassword, setLogInPassword]= useState('')
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
+    const [completedForm, setCompletedForm]= useState(false)
 
     function hanldeLogIn(e){
 
@@ -28,7 +30,7 @@ function Login({logInStatus,
 
         if(attemptedAccountAcess.length === 1){
 
-            return setLogInStatus(true), setShowNewUserTab(false), setCurrentUser(attemptedAccountAcess[0]), setLogInPassword(''), setLogInUserName('')
+            return setLogInStatus(true), setShowNewUserTab(false), setCurrentUser(attemptedAccountAcess[0]), setCompletedForm(attemptedAccountAcess[0].FormCompleted), setLogInPassword(''), setLogInUserName('')
 
         }
         if(attemptedAccountAcess.length === 0){
@@ -58,8 +60,8 @@ function Login({logInStatus,
                 age: null,
                 weight: null,
                 height: null,
-                BMI: null,
-                goals: null
+                goals: null,
+                bmi: null
         }
     }
         
@@ -139,7 +141,7 @@ if(logInStatus===false){
 if(logInStatus===true){
     return ( <> 
     <button onClick={handleLogOut}>Log Out</button>
-    <MainPage currentUser={currentUser} />
+    <MainPage currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     
     </>)
 }
