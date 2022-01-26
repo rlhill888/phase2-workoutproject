@@ -61,7 +61,7 @@ function FormQuestions({completedForm, currentUser, setCompletedForm}){
     return(
         //Enter heigh [5]'[6]
         <>
-        <h2>Answer These Questions So We Can Figure Out The Best Workout Plan For You</h2>
+        <h2>Since this is your first time on our site, answer These Questions So We Can Figure Out The Best Workout Plan For You</h2>
         <form onSubmit={handleSubmit}>
             <br/>
             <label name= "Age"/> How old are you? <label/>

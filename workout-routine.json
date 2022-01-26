@@ -1,39 +1,459 @@
 {
-  "WorkoutRoutinesForEachGoal": {
-    "Goal (ex: if you want to build muscle": {
-      "A routine for goal type 1 (ex leg day for building muscle)": [
+  "Goals": {
+    "To Gain Overall Weight": {
+
+      "LegDay":[
         {
-          "name": "workout 1",
-          "img": null
+          "id": 1,
+          "name": "Weighted Squats",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/barbellsquat-1491916408.gif" 
         },
         {
-          "name": "workout 2",
-          "img": null
+          "id": 2,
+          "name": "Hamstring Curl",
+          "Description": "",
+          "Image": "https://www.verywellfit.com/thmb/deKoSPO2qE_sNWGEAM14w4al7iY=/3000x2000/filters:fill(FFDB5D,1)/45-3498304-Leg-Curls-GIF-aa13a58de5a744719617eb7155357877.gif" 
+        },
+        {
+          "id": 3,
+          "name": "Dead Lifts",
+          "Description": "",
+          "Image": "https://qph.fs.quoracdn.net/main-qimg-9ceca1a5fbba29dcc66eb08144ab720c" 
+        },
+        {
+          "id":4,
+          "name": "Weighted Lunges",
+          "Description": "",
+          "Image": "https://thumbs.gfycat.com/PeskyRepentantDwarfmongoose-size_restricted.gif" 
+        }
+
+
+      ], 
+      "ChestAndTricepDay":[
+        {
+          "id": 1,
+          "name": "Bench Press",
+          "Description": "",
+          "Image": "https://davidblyth.co.uk/wp-content/uploads/2020/09/00251301-Barbell-Bench-Press_Chest_1080.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Dips",
+          "Description": "",
+          "Image": "https://media.gq.com/photos/5b75f187cc22243dc6ea0c59/master/w_1600%2Cc_limit/Scruggs-Chest-GIF9-2.gif" 
+        },
+        {
+          "id": 3,
+          "name": "Pushups",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pushup-1462808858.gif" 
+        },
+        {
+          "id": 4,
+          "name": "Chest Flys",
+          "Description": "",
+          "Image": "https://media.gq.com/photos/5b75f667b32f4e4b6699bbad/master/w_1600%2Cc_limit/Scruggs-Chest-GIF1-2.gif" 
+        },
+        {
+          "id": 5,
+          "name": "Dumbell Press",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/dumbbellbenchpress-1457043820.gif" 
         }
       ],
-      "Another routine for goal type 1 (ex back and biceps for building muscle)": [
+      "backAndBiceps":[
         {
-          "name": "workout 1",
-          "img": null
+          "id": 1,
+          "name": "Pullups",
+          "Description": "",
+          "Image": "https://media.gq.com/photos/5b637298649a373331a32228/master/w_1600%2Cc_limit/Dana-scruggs-fitness-GQ3227-W-GIF4.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Pulldowns",
+          "Description": "",
+          "Image": "https://blog.goodlifefitness.com/media/3682/closegriplatpulldown_male-1.gif?quality=100" 
+        },
+        {
+          "id": 3,
+          "name": "Bicep Curls",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/reverseEZ.gif" 
+        },
+        {
+          "id": 4,
+          "name": "Bent Barbell Rows",
+          "Description": "",
+          "Image": "https://images.ctfassets.net/8urtyqugdt2l/59NFoxuLAb0Wvoy4xpYajl/7b4556030c11107ca7d8cdbd610b1813/_uploads_1569314293-male-barbell-row.gif" 
         }
+
       ]
     },
-    "A different Goal (for example loosing weight)": {
-      "A routine for goal type 2 (ex leg day for loosing weight)": [
+    "To Loose Overall Weight": {
+
+      "LegDay":[
         {
-          "name": "workout 1",
-          "img": null
+          "id": 1,
+          "name": "Treadmil Run",
+          "Description": "",
+          "Image": "https://i.pinimg.com/originals/21/a0/28/21a028cc52af863d74ddf8e07cf381af.gif" 
         },
         {
-          "name": "workout 2",
-          "img": null
+          "id": 2,
+          "name": "Cycling",
+          "Description": "",
+          "Image": "https://images.wsj.net/im-319970?width=10&height=5" 
+        },
+        {
+          "id": 3,
+          "name": "Weighted Squats",
+          "Description": "",
+          "Image": "https://images.wsj.net/im-319970?width=10&height=5" 
+        },
+        {
+          "id": 4,
+          "name": "Dead Lifts",
+          "Description": "",
+          "Image": "https://images.wsj.net/im-319970?width=10&height=5" 
+        },
+        {
+          "id": 5,
+          "name": "Sit ups",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/situpeccentric-1472151762.gif" 
+        }, 
+        {
+          "id": 6,
+          "name": "Bicycle Crunch",
+          "Description": "",
+          "Image": "https://j.gifs.com/El371k@large.gif?download=true" 
+        },
+        {
+          "id": 7,
+          "name": "Plank",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/plank-1457045584.gif" 
+        }
+        
+        ],
+        "ChestAndTricep":[
+          {
+            "id": 1,
+            "name": "Tredmil Run",
+            "Description": "",
+            "Image": "https://i.pinimg.com/originals/21/a0/28/21a028cc52af863d74ddf8e07cf381af.gif" 
+          },
+          {
+            "id": 2,
+            "name": "Jump Rope",
+            "Description": "",
+            "Image": "https://images.saymedia-content.com/.image/t_share/MTc2MjkzMDM5NTcxMjgxMDg2/is-jump-rope-workout-for-cardio-and-weight-loss-effective.gif" 
+          },
+          {
+            "id": 3,
+            "name": "Weighted Dumbell Bench Press",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/inclinedumbbellbenchpress-1492108229.gif" 
+          },
+          {
+            "id": 4,
+            "name": "Chest Flys",
+            "Description": "",
+            "Image": "https://media.gq.com/photos/5b75f667b32f4e4b6699bbad/master/w_1600%2Cc_limit/Scruggs-Chest-GIF1-2.gif" 
+          },
+          {
+            "id": 5,
+            "name": "Mountain Climbers",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/mountainclimber-1472061303.gif" 
+          },
+          {
+            "id": 6,
+            "name": "Leg Lifts",
+            "Description": "",
+            "Image": "https://www.byrdie.com/thmb/P71TM4ioRZzONCRMaHvrQrfzONE=/500x350/filters:no_upscale():max_bytes(150000):strip_icc()/leglifts-1584ae42d00d499fbd5d80a799563069.gif" 
+          },
+          {
+            "id": 7,
+            "name": "Planks",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/plank-1457045584.gif" 
+          }
+        ],
+        "backAndBicep":[
+          {
+            "id": 1,
+            "name": "Tredmil Run",
+            "Description": "",
+            "Image": "https://i.pinimg.com/originals/21/a0/28/21a028cc52af863d74ddf8e07cf381af.gif" 
+          },
+          {
+            "id": 2,
+            "name": "Burpees",
+            "Description": "",
+            "Image": "https://177d01fbswx3jjl1t20gdr8j-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/Slow-Motion-Burpees.gif" 
+          },
+          {
+            "id": 3,
+            "name": "Burpees",
+            "Description": "",
+            "Image": "https://177d01fbswx3jjl1t20gdr8j-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/Slow-Motion-Burpees.gif" 
+          },
+          {
+            "id": 4,
+            "name": "Weighted Curls",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/reverseEZ.gif" 
+          },
+          {
+            "id": 5,
+            "name": "Pullups",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/pullup-1456956490.gif" 
+          },
+          {
+            "id": 6,
+            "name": "crunch",
+            "Description": "",
+            "Image": "https://www.verywellfit.com/thmb/t2itdr6ohruDQHsv-KPtKxpaKaI=/1333x1000/smart/filters:no_upscale()/Verywell-1-2696610-AbdominalCrunch01-1853copy-599463c4d088c00013e2cad9.gif" 
+          },
+          {
+            "id": 7,
+            "name": "Side plank with rotation",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/planksideplankreachandrotate-1472131712.gif" 
+          },
+          {
+            "id": 8,
+            "name": "Plank",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/plank-1457045584.gif" 
+          }
+        ]
+        
+
+    },
+    "To Tone muscles and get muscle definition": {
+
+      "backAndBiceps":[
+        {
+          "id": 1,
+          "name": "Tredmil Run",
+          "Description": "",
+          "Image": "https://i.pinimg.com/originals/21/a0/28/21a028cc52af863d74ddf8e07cf381af.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Curls",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/reverseEZ.gif" 
+        },
+        {
+          "id": 3,
+          "name": "Pullups",
+          "Description": "",
+          "Image": "https://blog.myfitnesspal.com/wp-content/uploads/2017/11/0219_MyFitnessPal_Pullup.gif" 
+        },
+        {
+          "id": 4,
+          "name": "Pullups",
+          "Description": "",
+          "Image": "https://blog.myfitnesspal.com/wp-content/uploads/2017/11/0219_MyFitnessPal_Pullup.gif" 
+        },
+        {
+          "id": 5,
+          "name": "Pulldowns",
+          "Description": "",
+          "Image": "https://blog.goodlifefitness.com/media/3682/closegriplatpulldown_male-1.gif?quality=100" 
+        },
+        {
+          "id": 6,
+          "name": "Bent Rows",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/barbellrow-1457038583.gif" 
+        }, 
+        {
+          "id": 7,
+          "name": "Seated Rows",
+          "Description": "",
+          "Image": "https://www.verywellfit.com/thmb/4gJaKRUD1IMGUk8Otwzvxz5s0Rw=/3000x2000/filters:fill(FFDB5D,1)/51-3498605-Seated-Cable-Row-GIF-7b65c9e27d14457584be75440b0786d5.gif" 
         }
       ],
-      "Another routine for goal type 2 (ex back and biceps for loosign weight)": [
+
+     
+      "ChestandTriceps":[
         {
-          "name": "workout 1",
-          "img": null
+          "id": 1,
+          "name": "Jump Rope",
+          "Description": "",
+          "Image": "https://www.nlfit.com/media/wysiwyg/JRXFACTORSB.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Bench Press",
+          "Description": "",
+          "Image": "https://images.squarespace-cdn.com/content/v1/55f89d54e4b0fcc8b9d4824f/1569283736864-ITUSNCZGV3OQUD6WPMKQ/Bench-Press.gif?format=2500w" 
+        },
+        {
+          "id": 3,
+          "name": "Dumbell press",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/dumbbellbenchpress-1457043820.gif" 
+        },
+        {
+          "id": 4,
+          "name": "Dips",
+          "Description": "",
+          "Image": "https://media.gq.com/photos/5b75f187cc22243dc6ea0c59/master/w_1600%2Cc_limit/Scruggs-Chest-GIF9-2.gif" 
+        },
+        {
+          "id": 5,
+          "name": "Incline Dumbell Bench Press",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/inclinedumbbellbenchpress-1492108229.gif" 
+        },
+        {
+          "id": 6,
+          "name": "Incline Dumbell Bench Press",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/inclinedumbbellbenchpress-1492108229.gif" 
+        },
+        {
+          "id": 7,
+          "name": "Chest Press",
+          "Description": "",
+          "Image": "https://www.mitrecsports.com/assets/Fitness-Machine-chest-press.gif" 
         }
+      ],
+      "Leg":[
+        {
+          "id": 1,
+          "name": "Burpes",
+          "Description": "",
+          "Image": "https://177d01fbswx3jjl1t20gdr8j-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/Slow-Motion-Burpees.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Weighted Lunges",
+          "Description": "",
+          "Image": "https://cdn.prod.openfit.com/uploads/2019/04/03152340/front-to-back-lunge.gif" 
+        },
+        {
+          "id": 3,
+          "name": "Squats",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/barbellsquat-1491916408.gif" 
+        },
+        {
+          "id": 4,
+          "name": "Deadlifts",
+          "Description": "",
+          "Image": "https://www.verywellfit.com/thmb/j5m26RaBCeFgP9JHaH1dOg9fIeQ=/2667x2000/smart/filters:no_upscale()/21-3498608-Deadlift-GIF-b76ce11dc6ef403fa0bf19f252e4b39e.gif" 
+        },
+        {
+          "id": 5,
+          "name": "Hamstring curls",
+          "Description": "",
+          "Image": "https://www.verywellfit.com/thmb/deKoSPO2qE_sNWGEAM14w4al7iY=/3000x2000/filters:fill(FFDB5D,1)/45-3498304-Leg-Curls-GIF-aa13a58de5a744719617eb7155357877.gif" 
+        },
+        {
+          "id": 6,
+          "name": "Calf Raises",
+          "Description": "",
+          "Image": "https://www.verywellfit.com/thmb/g1bWVwkOqJ7UoYGL7p1DOdQB23w=/3000x2000/filters:no_upscale():max_bytes(150000):strip_icc()/33-Standing-Calf-Raises-GIF-52fe683d2cce4571a84ff56b075a06f0.gif" 
+        }
+        
+      ] 
+    },
+    "To gain muscle mass": {
+
+      "LegDay":[
+        {
+          "id": 1,
+          "name": "Weighted Squats",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/barbellsquat-1491916408.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Hamstring Curl",
+          "Description": "",
+          "Image": "https://www.verywellfit.com/thmb/deKoSPO2qE_sNWGEAM14w4al7iY=/3000x2000/filters:fill(FFDB5D,1)/45-3498304-Leg-Curls-GIF-aa13a58de5a744719617eb7155357877.gif" 
+        },
+        {
+          "id": 3,
+          "name": "Dead Lifts",
+          "Description": "",
+          "Image": "https://qph.fs.quoracdn.net/main-qimg-9ceca1a5fbba29dcc66eb08144ab720c" 
+        },
+        {
+          "id":4,
+          "name": "Weighted Lunges",
+          "Description": "",
+          "Image": "https://thumbs.gfycat.com/PeskyRepentantDwarfmongoose-size_restricted.gif" 
+        }
+
+
+      ], 
+      "ChestAndTricepDay":[
+        {
+          "id": 1,
+          "name": "Bench Press",
+          "Description": "",
+          "Image": "https://davidblyth.co.uk/wp-content/uploads/2020/09/00251301-Barbell-Bench-Press_Chest_1080.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Dips",
+          "Description": "",
+          "Image": "https://media.gq.com/photos/5b75f187cc22243dc6ea0c59/master/w_1600%2Cc_limit/Scruggs-Chest-GIF9-2.gif" 
+        },
+        {
+          "id": 3,
+          "name": "Pushups",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pushup-1462808858.gif" 
+        },
+        {
+          "id": 4,
+          "name": "Chest Flys",
+          "Description": "",
+          "Image": "https://media.gq.com/photos/5b75f667b32f4e4b6699bbad/master/w_1600%2Cc_limit/Scruggs-Chest-GIF1-2.gif" 
+        },
+        {
+          "id": 5,
+          "name": "Dumbell Press",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/dumbbellbenchpress-1457043820.gif" 
+        }
+      ],
+      "backAndBiceps":[
+        {
+          "id": 1,
+          "name": "Pullups",
+          "Description": "",
+          "Image": "https://media.gq.com/photos/5b637298649a373331a32228/master/w_1600%2Cc_limit/Dana-scruggs-fitness-GQ3227-W-GIF4.gif" 
+        },
+        {
+          "id": 2,
+          "name": "Pulldowns",
+          "Description": "",
+          "Image": "https://blog.goodlifefitness.com/media/3682/closegriplatpulldown_male-1.gif?quality=100" 
+        },
+        {
+          "id": 3,
+          "name": "Bicep Curls",
+          "Description": "",
+          "Image": "https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/reverseEZ.gif" 
+        },
+        {
+          "id": 4,
+          "name": "Bent Barbell Rows",
+          "Description": "",
+          "Image": "https://images.ctfassets.net/8urtyqugdt2l/59NFoxuLAb0Wvoy4xpYajl/7b4556030c11107ca7d8cdbd610b1813/_uploads_1569314293-male-barbell-row.gif" 
+        }
+
       ]
     }
   },
