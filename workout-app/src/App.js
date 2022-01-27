@@ -11,23 +11,7 @@ function App() {
   const [currentUser, setCurrentUser]= useState('')
   const [allGoalOptions, setAllGoalOptions]= useState(null)
 
-  const [color, setColor] = useState("");
 
-  function randomHex(){
-    console.log("Func Called");
-    let letters = "0123456789ABCDEF";
-    let random = "#";
-    for (let i = 0; i < 6; i++) {
-        random += letters[Math.floor(Math.random() * 16)];
-    }
-    setColor({
-      color: random,
-    });
-    console.log("New color: "+color.color);
-  };
-
-
-  
 
   useEffect(() => {
     fetch('http://localhost:3001/Accounts')
@@ -55,8 +39,6 @@ function App() {
     allGoalOptions={allGoalOptions}
     currentUser={currentUser}
     
-    color={color}
-    setColor={setColor}
     />
     
   )

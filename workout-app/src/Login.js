@@ -61,8 +61,7 @@ function Login({logInStatus,
     allGoalOptions, 
     setCurrentUser,
 
-    color,
-    setColor
+
 }){
     
     
@@ -71,6 +70,10 @@ function Login({logInStatus,
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
     const [completedForm, setCompletedForm]= useState(false)
+
+
+    const [bg, setBg] = useState(false)
+
 
     function hanldeLogIn(e){
 
@@ -151,8 +154,8 @@ function Login({logInStatus,
 
     }
 
-    function handleColor(e) {
-        return setColor("#000000");
+    function handleBg() {
+        setBg((bg) => !bg) ;
     }
 
 if(logInStatus===false && showNewUserTab=== true){
@@ -172,10 +175,12 @@ return(<>
 
 }
 
+const wrapper = bg ? "App dark" : "App light"
+
 if(logInStatus===false){
     return(
         <>
-        <div className="wrapper">
+        <div className={wrapper}>
       <h1>Workout 4 Me</h1>
       <h2>The expertise you need to achieve your fitness goals</h2>
       <form className="mainform">
@@ -190,8 +195,7 @@ if(logInStatus===false){
     </div>
     <div>
         <h2>New User?</h2>
-        <Button onClick={() => {
-            handleNewUserButton(); handleColor()}}>Register</Button>
+        <Button onClick={handleNewUserButton, handleBg}>Register</Button>
          </div>
     </>
     

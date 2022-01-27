@@ -1,10 +1,10 @@
-.boo {
+/* .boo {
     /* background-image: url("../photos/boxinggymbg.jpeg");
     background-repeat: no-repeat;
     background-size: cover; */
 
     
-    display: inline-block;
+    /* display: inline-block;
     width: 22%;
 } 
 
@@ -12,7 +12,7 @@
     background-color: black;
     display: float;
     margin: 10px;
-}
+}  */
 
 img {
     border-radius: 10%;
