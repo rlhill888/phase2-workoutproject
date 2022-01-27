@@ -68,7 +68,9 @@ function WorkoutTrackerCard({workout, routines, routineName}){
                         let weight=0
                         function handleSetsChange(e){
                             sets= e.target.value
+
                             console.log(e.target.value)
+
                         }
                         function handleRepsChange(e){
                             reps= e.target.value

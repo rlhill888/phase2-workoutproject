@@ -1,9 +1,10 @@
 import React from "react";
 import WorkOutCard from "./WorkOutCard";
+import styled from "styled-components";
+import "./WorkoutRoutines.css";
 
 
-function WorkoutRoutines({currentUser, name}){
-    
+function WorkoutRoutines({currentUser, name}){    
     function iterrateWorkoutCards(){
         function setRepsOrTime(array){
             
@@ -59,11 +60,15 @@ function WorkoutRoutines({currentUser, name}){
     
     return(
         <>
-        <h2>Routine Name: {name}</h2>
-        <div> 
-        {iterrateWorkoutCards()}
-        </div>
+    <div className="row">
+        <div className="column">
+        <h2 className="routinetitle">Routine Name: {name}</h2>
         
+        {iterrateWorkoutCards()}
+
+        
+       </div> 
+       </div>
         </>
     )
 }

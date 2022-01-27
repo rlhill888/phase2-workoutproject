@@ -1,6 +1,23 @@
 import React, {useState} from "react";
 import WorkoutTrackerCard from "./WorkoutTrackerCard";
 
+import "./WorkoutRoutineTrackerForm.css"
+import styled from "styled-components";
+
+const Button = styled.button`
+     && { background: black;
+    border-color: yellow;
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    margin: 20px;
+    }
+
+    &:hover {
+        background: yellow;
+        color: black;
+    }
+`;
 
 function WorkoutRoutineTrackerForm({currentUser}){
     const routines= currentUser.Routines
@@ -22,7 +39,9 @@ function WorkoutRoutineTrackerForm({currentUser}){
         return(<> 
         <h1>Back and Biceps Form</h1>
         <WorkoutTrackerCard routineName="Back and Biceps" routines={routines["Back and Biceps"]}/>
-        <button onClick={()=> setFormType('none')}>Close Form</button>
+
+        <Button onClick={()=> setFormType('none')}>Close Form</Button>
+
         
         
         </>)
@@ -31,7 +50,9 @@ function WorkoutRoutineTrackerForm({currentUser}){
     if(formType==="Chest and Triceps"){
         return(<> 
         <h1>Chest and Triceps Form</h1>
-        <button onClick={()=> setFormType('none')}>Close Form</button>
+
+        <Button onClick={()=> setFormType('none')}>Close Form</Button>
+
         
         
         </>)
@@ -40,7 +61,8 @@ function WorkoutRoutineTrackerForm({currentUser}){
     if(formType==="Leg Day"){
         return(<> 
         <h1>Leg Day Form</h1>
-        <button onClick={()=> setFormType('none')}>Close Form</button>
+        <Button onClick={()=> setFormType('none')}>Close Form</Button>
+
         
         
         </>)
@@ -50,7 +72,8 @@ if(showForm===false){
     return(
 
         <>
-        <button onClick={handleButtonClick} >Track a New Workout</button>
+        <Button onClick={handleButtonClick} >Track a New Workout</Button>
+
         {/* <p>{currentUser.Username}</p>
         <WorkoutTrackerCard /> */}
         </>
@@ -60,7 +83,8 @@ if(showForm===true){
     return(
 
         <>
-        <button onClick={handleButtonClick} >Close Workout Form</button>
+        <Button onClick={handleButtonClick} >Close Workout Form</Button>
+
         <br/>
         <label name="routineLabel"> Which Routine would you like to track?</label>
         <br/>
@@ -69,7 +93,8 @@ if(showForm===true){
                 
             <>
             <br/>
-            <button onClick={() =>handleRoutineTypeClick(a)}>{a}</button> 
+            <Button onClick={() =>handleRoutineTypeClick(a)}>{a}</Button> 
+
             </>)})}
 
 

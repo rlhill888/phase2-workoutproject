@@ -1,5 +1,53 @@
 import React, {useState, useEffect} from "react";
 import MainPage from "./MainPage";
+import styled from "styled-components";
+import "./Login.css";
+
+const Button = styled.button`
+     && { background: black;
+    border-color: yellow;
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    margin: 20px;
+    }
+
+    &:hover {
+        background: yellow;
+        color: black;
+    }
+`;
+
+const Input = styled.input`
+    && { background-color: black;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    }
+  `;
+
+const Label = styled.label`
+color: white;
+padding: 10px;
+text-align: center;
+font-size: 20px;
+font-family: 'Bebas Neue', cursive;
+`;
+
+// const H1 = styled.h1`
+//     text-family: monospace;
+// `
+
+// const Input = styled.input`
+//     padding: 0.5em;
+//     margin: 0.5em;
+//     color: ${props => props.inputColor || "red"};
+//     background: green;
+//     border: none;border
+// `;
 
 
 
@@ -10,8 +58,8 @@ function Login({logInStatus,
     userAccounts,
     currentUser,
     setUserAccounts,
-    allGoalOptions, 
-    setCurrentUser  }){
+    allGoalOptions,
+    setCurrentUser }){
     
     
     const [logInUserName, setLogInUserName]= useState('')
@@ -19,6 +67,10 @@ function Login({logInStatus,
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
     const [completedForm, setCompletedForm]= useState(false)
+
+
+    const [bg, setBg] = useState(false)
+
 
     function hanldeLogIn(e){
 
@@ -101,43 +153,48 @@ function Login({logInStatus,
 
     }
 
+    function handleBg() {
+        setBg((bg) => !bg) ;
+    }
+
 if(logInStatus===false && showNewUserTab=== true){
 return(<> 
-<h1>Create a New Account</h1>
-<form>
-    <label name="createNewUserName"/> User Name: <label/>
-    <input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
+<h2>Create a New Account</h2>
+<form className="new-form">
+    <label name="createNewUserName" /> Username: <label/>
+    <Input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
     <br/>
-    <label name="createNewPassword"/> Password: <label/>
-    <input onChange={handleNewPasswordChange}type="password" name="createPassword" />
+    <label name="createNewPassword" /> Password: <label/>
+    <Input onChange={handleNewPasswordChange}type="password" name="createPassword" />
     <br/>
-    <input onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
+    <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
 
 </>)
 
 }
 
+const wrapper = bg ? "App dark" : "App light"
+
 if(logInStatus===false){
     return(
         <>
-        <div className="wrapper">
-      <h1>Welcome to whatever our site is called</h1>
-      <form>
-      <fieldset>
+        <div className={wrapper}>
+      <h1>Workout 4 Me</h1>
+      <h2>The expertise you need to achieve your fitness goals</h2>
+      <form className="mainform">
          <label>
            <p>Username:</p>
-           <input onChange={handleLoginUserName} type= "text" />
+           <input onChange={handleLoginUserName} type= "text" className="input" />
            <p>Password:</p>
-           <input onChange= {handleLoginPassword} type= "password"/>
+           <input onChange= {handleLoginPassword} type= "password" className="input"/>
          </label>
-       </fieldset>
-       <button onClick= {hanldeLogIn} type="submit">Log In</button>
       </form>
+      <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
     </div>
     <div>
         <h2>New User?</h2>
-        <button onClick={handleNewUserButton}>I am a new User</button>
+        <Button onClick={handleNewUserButton, handleBg}>Register</Button>
          </div>
     </>
     
@@ -145,7 +202,8 @@ if(logInStatus===false){
 }
 if(logInStatus===true){
     return ( <> 
-    <button onClick={handleLogOut}>Log Out</button>
+    <Button onClick={handleLogOut}>Log Out</Button>
+
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     
     </>)

@@ -1,0 +1,29 @@
+/* .boo {
+    /* background-image: url("../photos/boxinggymbg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    
+    /* display: inline-block;
+    width: 22%;
+} 
+
+.boo2 {
+    background-color: black;
+    display: float;
+    margin: 10px;
+}  */
+
+img {
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  img:hover {
+    -webkit-filter: brightness(30%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }

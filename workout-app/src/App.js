@@ -10,6 +10,7 @@ function App() {
   const [showNewUserTab, setShowNewUserTab]= useState(false)
   const [currentUser, setCurrentUser]= useState('')
   const [allGoalOptions, setAllGoalOptions]= useState(null)
+
   useEffect(() => {
     fetch('http://localhost:3001/Accounts')
     .then((resp) => resp.json())
