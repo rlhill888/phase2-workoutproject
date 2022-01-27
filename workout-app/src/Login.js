@@ -9,7 +9,8 @@ function Login({logInStatus,
     setShowNewUserTab, 
     userAccounts,
     currentUser,
-    setUserAccounts, 
+    setUserAccounts,
+    allGoalOptions, 
     setCurrentUser  }){
     
     
@@ -62,7 +63,11 @@ function Login({logInStatus,
                 height: null,
                 goals: null,
                 bmi: null
-        }
+        },
+            Routines: null,
+            form: null
+
+        
     }
         
         fetch('http://localhost:3001/Accounts', {
@@ -141,7 +146,7 @@ if(logInStatus===false){
 if(logInStatus===true){
     return ( <> 
     <button onClick={handleLogOut}>Log Out</button>
-    <MainPage currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
+    <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     
     </>)
 }

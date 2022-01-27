@@ -4,18 +4,20 @@ import WorkoutRoutines from "./WorkoutRoutines";
 
 function WorkoutSchedule({currentUser}){
 
+
 if(currentUser.FormCompleted === true){
+    const routinesArray = Object.keys(currentUser.Routines)
 
 return(
     <>
     <h2>Here are your workout routines:</h2>
-    <WorkoutRoutines />
-    <WorkoutRoutines />
-    <WorkoutRoutines />
-    <WorkoutRoutines />
-    <WorkoutRoutines />
     
-    <WorkoutRoutineTrackerForm />
+    {routinesArray.map((array) =>{ 
+            return <WorkoutRoutines routine={array} currentUser={currentUser} key={array} name={array} 
+            
+            />
+            
+        })}
      </>
 )
 }
