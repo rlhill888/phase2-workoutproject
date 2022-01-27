@@ -3,12 +3,6 @@ import WorkoutRoutineTrackerForm from "./WorkoutRoutineTrackerForm"
 import WorkoutRoutines from "./WorkoutRoutines";
 
 function WorkoutSchedule({currentUser}){
-    
-    
-    
-    
-    
-
 
 
 if(currentUser.FormCompleted === true){
