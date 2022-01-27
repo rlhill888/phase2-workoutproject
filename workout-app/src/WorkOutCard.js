@@ -1,17 +1,19 @@
 import React from "react";
+import styled from "styled-components";
+import "./WorkOutCard.css";
 
-function WorkOutCard({workoutName, workoutImage}){
+
+function WorkOutCard({workoutName, workoutImage, currentUser}){
     return(
-        <>
-        <div>
-            <h2>Workout: Workout name </h2>
-            <img width= "200" height="200" src={'https://cathe.com/wp-content/uploads/2017/06/shutterstock_314080721.jpg'} />
+        <div className="boo">
+        <div className="boo2">
+            <h2>Workout: {workoutName} </h2>
+            <img width= "200" height="200" src={workoutImage} />
+            <br/>
+            <h3>Sets: (3)</h3>
+            <h3>Reps: (10)</h3>
         </div>
-        <div>
-            <h3>Sets: (variable for number of sets depending on workout plan and data)</h3>
-            <h3>Reps: (variable for number of reps depending on workout plan and data)</h3>
         </div>
-        </>
     )
 }
 export default WorkOutCard;

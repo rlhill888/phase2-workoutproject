@@ -1,13 +1,40 @@
 import React, {useState, useEffect} from "react";
 import MainPage from "./MainPage";
 import styled from "styled-components";
-import "./index.css";
+import "./Login.css";
 
 const Button = styled.button`
-    background: black;
+     && { background: black;
+    border-color: yellow;
+    color: yellow;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    margin: 20px;
+    }
+
+    &:hover {
+        background: yellow;
+        color: black;
+    }
+`;
+
+const Input = styled.input`
+    && { background-color: black;
     border-color: white;
     color: white;
-    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    }
+  `;
+
+const Label = styled.label`
+color: white;
+padding: 10px;
+text-align: center;
+font-size: 20px;
+font-family: 'Bebas Neue', cursive;
 `;
 
 // const H1 = styled.h1`
@@ -22,14 +49,21 @@ const Button = styled.button`
 //     border: none;border
 // `;
 
+
+
 function Login({logInStatus, 
     setLogInStatus, 
     showNewUserTab, 
     setShowNewUserTab, 
     userAccounts,
     currentUser,
-    setUserAccounts, 
-    setCurrentUser  }){
+    setUserAccounts,
+    allGoalOptions, 
+    setCurrentUser,
+
+    color,
+    setColor
+}){
     
     
     const [logInUserName, setLogInUserName]= useState('')
@@ -81,7 +115,9 @@ function Login({logInStatus,
                 height: null,
                 goals: null,
                 bmi: null
-        }
+        },
+            Routines: null 
+        
     }
         
         fetch('http://localhost:3001/Accounts', {
@@ -115,17 +151,21 @@ function Login({logInStatus,
 
     }
 
+    function handleColor(e) {
+        return setColor("#000000");
+    }
+
 if(logInStatus===false && showNewUserTab=== true){
 return(<> 
 <h2>Create a New Account</h2>
-<form>
-    <label name="createNewUserName" /> User Name: <label/>
-    <input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
+<form className="new-form">
+    <label name="createNewUserName" /> Username: <label/>
+    <Input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
     <br/>
     <label name="createNewPassword" /> Password: <label/>
-    <input onChange={handleNewPasswordChange}type="password" name="createPassword" />
+    <Input onChange={handleNewPasswordChange}type="password" name="createPassword" />
     <br/>
-    <input onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
+    <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
 
 </>)
@@ -138,21 +178,20 @@ if(logInStatus===false){
         <div className="wrapper">
       <h1>Workout 4 Me</h1>
       <h2>The expertise you need to achieve your fitness goals</h2>
-      <form>
+      <form className="mainform">
          <label>
            <p>Username:</p>
-           <input onChange={handleLoginUserName} type= "text" />
+           <input onChange={handleLoginUserName} type= "text" className="input" />
            <p>Password:</p>
-           <input onChange= {handleLoginPassword} type= "password"/>
+           <input onChange= {handleLoginPassword} type= "password" className="input"/>
          </label>
-         </form>
-       <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
-
-      
+      </form>
+      <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
     </div>
     <div>
         <h2>New User?</h2>
-        <Button onClick={handleNewUserButton}>Sign Up</Button>
+        <Button onClick={() => {
+            handleNewUserButton(); handleColor()}}>Register</Button>
          </div>
     </>
     
@@ -161,7 +200,7 @@ if(logInStatus===false){
 if(logInStatus===true){
     return ( <> 
     <Button onClick={handleLogOut}>Log Out</Button>
-    <MainPage currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
+    <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     
     </>)
 }
