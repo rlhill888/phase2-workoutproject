@@ -17,6 +17,7 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
             <h3>Sets: {setSets}</h3>
             <h3>Reps: {reps}</h3>
         </div>
+
         </div>
         </>
     )
@@ -33,6 +34,7 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
                 <h3>Time: {time} Minute{time>1 ? "s":""}</h3>
             </div>
             </div>
+
             </>
         )
         }

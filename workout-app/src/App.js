@@ -11,8 +11,6 @@ function App() {
   const [currentUser, setCurrentUser]= useState('')
   const [allGoalOptions, setAllGoalOptions]= useState(null)
 
-
-
   useEffect(() => {
     fetch('http://localhost:3001/Accounts')
     .then((resp) => resp.json())
@@ -37,9 +35,7 @@ function App() {
     showNewUserTab={showNewUserTab}
     setCurrentUser={setCurrentUser}
     allGoalOptions={allGoalOptions}
-    currentUser={currentUser}
-    
-    />
+    currentUser={currentUser}/>
     
   )
 }

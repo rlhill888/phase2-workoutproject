@@ -15,7 +15,8 @@ const fat= 0;
 if(goals===toneMuscle){
     return(
         <>
-        <h2>Here is your meal plan when it comes to toning muscle and body definition:</h2>
+
+        <h1>Here is your meal plan when it comes to toning muscle and body definition:</h1>
 
         <br/>
 
@@ -36,7 +37,7 @@ if(goals===looseWEight){
     
     return(
         <>
-        <h2>Here is your meal plan when it comes to loosing weight:</h2>
+        <h1>Here is your meal plan when it comes to loosing weight:</h1>
 
         <br/>
 

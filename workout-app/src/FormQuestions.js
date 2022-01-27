@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import "./FormQuestions.css";
 
-
 function FormQuestions({allGoalOptions, completedForm, currentUser, setCompletedForm}){
     
     function handleSubmit(e){
@@ -83,6 +82,7 @@ function FormQuestions({allGoalOptions, completedForm, currentUser, setCompleted
            
             <label name= "Age" /> How old are you? <label/>
             <input onChange={handleAgeChange} name="Age" type="number" placeholder="Your age here"/>
+
             <br/>
             <label name= "Weight Question" className="tea2"/> How much do you weigh? <label/>
             <input onChange= {handleWeightChange} name =" Weight Question" type="number" placeholder="Weight in pounds" />
@@ -100,7 +100,9 @@ function FormQuestions({allGoalOptions, completedForm, currentUser, setCompleted
             <br />
             <input onClick={handleGoalAnswer} name ="goals"  type="radio" value="To gain muscle mass"/> To gain muscle mass
             <br/>
+
             <input onClick={handleGoalAnswer} name ="goals"  type="radio" value="To Tone muscles and get muscle definition"/> To tone muscles and get muscle definition 
+
             <br/>
             <p>Based on the answers to these questions we will make a customized workout and meal plan catered to you.</p>
             <input type="submit" value="Submit" className="submit"/>

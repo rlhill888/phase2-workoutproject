@@ -2239,21 +2239,6 @@
       },
       "form": null,
       "id": 11
-    },
-    {
-      "Username": "jen",
-      "Password": "123",
-      "FormCompleted": false,
-      "data": {
-        "age": null,
-        "weight": null,
-        "height": null,
-        "goals": null,
-        "bmi": null
-      },
-      "Routines": null,
-      "form": null,
-      "id": 12
     }
   ]
 }

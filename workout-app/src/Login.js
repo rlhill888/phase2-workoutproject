@@ -58,11 +58,8 @@ function Login({logInStatus,
     userAccounts,
     currentUser,
     setUserAccounts,
-    allGoalOptions, 
-    setCurrentUser,
-
-
-}){
+    allGoalOptions,
+    setCurrentUser }){
     
     
     const [logInUserName, setLogInUserName]= useState('')
@@ -119,7 +116,9 @@ function Login({logInStatus,
                 goals: null,
                 bmi: null
         },
-            Routines: null 
+            Routines: null,
+            form: null
+
         
     }
         
@@ -204,6 +203,7 @@ if(logInStatus===false){
 if(logInStatus===true){
     return ( <> 
     <Button onClick={handleLogOut}>Log Out</Button>
+
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     
     </>)

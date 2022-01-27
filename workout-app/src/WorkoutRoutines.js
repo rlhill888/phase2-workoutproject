@@ -4,9 +4,7 @@ import styled from "styled-components";
 import "./WorkoutRoutines.css";
 
 
-function WorkoutRoutines({currentUser, name}){
-
-    
+function WorkoutRoutines({currentUser, name}){    
     function iterrateWorkoutCards(){
         function setRepsOrTime(array){
             
@@ -67,6 +65,7 @@ function WorkoutRoutines({currentUser, name}){
         <h2 className="routinetitle">Routine Name: {name}</h2>
         
         {iterrateWorkoutCards()}
+
         
        </div> 
        </div>
