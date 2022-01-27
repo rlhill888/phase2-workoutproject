@@ -8,7 +8,10 @@ const gainWeight="To Gain Overall Weight"
 const looseWEight= "To Loose Overall Weight"
 const gainMuscleMass= "To gain muscle mass"
 
-
+const calories= 0;
+const carbs= 0;
+const protein= 0;
+const fat= 0;
 if(goals===toneMuscle){
     return(
         <>
@@ -22,9 +25,31 @@ if(goals===toneMuscle){
 
         <p>what are macros? (explain macros), (have button to click)</p>
         <br/>
-        <h3>Carbs:</h3>
-        <h3>Protein: </h3>
-        <h3>Fat:</h3>
+        <h3>Calories: {calories}</h3>
+        <h3>Carbs: {carbs} grams</h3>
+        <h3>Protein: {protein} grams</h3>
+        <h3>Fat: {fat} grams</h3>
+        </>
+    )
+}
+if(goals===looseWEight){
+    
+    return(
+        <>
+        <h1>Here is your meal plan when it comes to loosing weight:</h1>
+
+        <br/>
+
+        <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
+
+        <h2>Here are your Macros</h2>
+
+        <p>what are macros? (explain macros), (have button to click)</p>
+        <br/>
+        <h3>Calories: {calories}</h3>
+        <h3>Carbs: {carbs} grams</h3>
+        <h3>Protein: {protein} grams</h3>
+        <h3>Fat: {fat} grams</h3>
         </>
     )
 }

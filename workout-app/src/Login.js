@@ -64,7 +64,9 @@ function Login({logInStatus,
                 goals: null,
                 bmi: null
         },
-            Routines: null 
+            Routines: null,
+            form: null
+
         
     }
         

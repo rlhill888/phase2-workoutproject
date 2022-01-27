@@ -3,6 +3,7 @@ import FormQuestions from "./FormQuestions";
 import Login from "./Login";
 import WorkoutSchedule from "./WorkoutSchedule";
 import MealPlan from "./MealPlan";
+import WorkoutRoutineTrackerForm from "./WorkoutRoutineTrackerForm";
 
 
 
@@ -15,6 +16,7 @@ console.log(currentUser)
     <FormQuestions allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     <WorkoutSchedule currentUser={currentUser}/>
     <MealPlan currentUser={currentUser}/>
+    <WorkoutRoutineTrackerForm currentUser={currentUser}/>
     </>
     )
 }
