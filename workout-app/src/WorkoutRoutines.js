@@ -49,9 +49,9 @@ function WorkoutRoutines({currentUser, name}){
                     }
                 }
                 
-            return( <> 
+            return( <div className="rowcard"> 
             <WorkOutCard key={a.id} workoutName={a.name} currentUser={currentUser} workoutImage={a.Image} setSets={setSets()} id={a.id}/> 
-            </>)
+            </div>)
             })
         }
     }
@@ -63,7 +63,8 @@ function WorkoutRoutines({currentUser, name}){
     return(
         <>
      <div className="column">
-        <h2 className="routinetitle">Routine Name: {name}</h2>
+        <h2 className="routinetitle">Routine Name: 
+        <br/>{name}</h2>
         
         {iterrateWorkoutCards()}
         </div>

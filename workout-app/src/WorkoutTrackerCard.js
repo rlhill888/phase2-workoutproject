@@ -1,4 +1,14 @@
 import React, {useState} from "react";
+import "./WorkoutTrackerCard.css";
+import styled from "styled-components";
+
+const Label = styled.label`
+color: white;
+padding: 10px;
+text-align: center;
+font-size: 20px;
+font-family: 'Bebas Neue', cursive;
+`;
 
 function WorkoutTrackerCard({workout, routines, routineName}){
     // console.log(routineName)
@@ -29,12 +39,12 @@ function WorkoutTrackerCard({workout, routines, routineName}){
     return(
         <>
         <form onSubmit={(e)=>handleSubmit(e)}>
-        <table>
+        <table className="table">
             <tr>
                 <th>Workout</th>
-                <th>Sets Done</th>
+                <th>Sets</th>
                 <th>Weight Used in sets</th>
-                <th>reps: </th>
+                <th>reps </th>
             </tr>
             {routines.map((a)=>{
 
@@ -140,7 +150,7 @@ function WorkoutTrackerCard({workout, routines, routineName}){
                             <tr key={a.name}>
                 <td> {a.name}</td>
                 <td> 
-                    <input className={routineName} onChange={handleSetsChange}placeholder= {`Number of sets of ${a.name}`} name={`sets for ${a.name}`}></input>
+                    <input className={routineName} onChange={handleSetsChange}placeholder= {`sets`} name={`sets for ${a.name}`}></input>
                 </td>
                 <td> 
                     <input className={routineName} onChange={handleWeightChange}placeholder= "Weight" name={`weight for ${a.name}`}></input>
@@ -157,10 +167,14 @@ function WorkoutTrackerCard({workout, routines, routineName}){
                 }
                 
             })}
-            <tfoot /><label name="date"/>Date: <label/>
-        <input name="date" type="date"/> <tfoot/>
-        </table>
-        <input type="submit"></input>
+            </table>
+            
+                <label name="date" className="calendarlabel">Date: </label>
+                <input name="date" type="date"/>
+            <br/>
+        
+        
+        <input type="submit" className="trackersubmit"></input>
         </form>
         </>
     )

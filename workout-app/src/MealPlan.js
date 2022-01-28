@@ -18,12 +18,6 @@ let fat= 0;
 let activityLevel= 0
 
 
-
-
-
-
-
-
 function handleMacrosButton(){
     console.log('click')
 }
@@ -48,14 +42,13 @@ if(goals===toneMuscle){
     return(
         <>
 
-
         <h1 className="mealplantitle">Here is your meal plan when it comes to toning muscle and body definition :</h1>
 
         <br/>
         <div>
         <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
-
         <h2>Here are your Macros:</h2>
+
 
         <MacrosButton />
 
@@ -104,6 +97,7 @@ if(goals===looseWEight){
         <h2>Here are your Macros</h2>
 
         <MacrosButton />
+
         <br/>
         <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals</h2>
         <h3>Calories: {calories}</h3>
@@ -138,7 +132,7 @@ if(goals===gainMuscleMass){
     
     return(
         <>
-        <h1>Here is your meal plan when it comes to gaining muscle mass:</h1>
+        <h1 className="mealplantitle">Here is your meal plan when it comes to gaining muscle mass :</h1>
 
         <br/>
 
@@ -178,13 +172,16 @@ if(goals===gainWeight){
     
     return(
         <>
+
         <h1>Here is your meal plan when it comes to gaining weight:</h1>
 
         <br/>
 
         <h2>Here are your Macros</h2>
+
         <br/>
         <MacrosButton />
+
         <br/>
         <h2>In order to gain weight, you should try to consume these daily macros to achieve your goals</h2>
         <h3>Calories: {calories}</h3>

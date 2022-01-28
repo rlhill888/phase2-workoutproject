@@ -14,10 +14,11 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
         <div className="boo2"> */}
         <div className="row">
        
-            <h2>Workout #{id}: {workoutName} </h2>
-            <img width= "200" height="200" src={workoutImage} />
-            <h3>Sets: {setSets}</h3>
-            <h3>Reps: {reps}</h3>
+            <h2>Workout #{id}: 
+            <br/>{workoutName} </h2>
+            <img width= "175" height="175" src={workoutImage} />
+            <h3 className="setreps">Sets: {setSets}<br/>
+            Reps: {reps}</h3>
        
 
         </div>
@@ -32,12 +33,13 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
             <div className="boo2"> */}
             <div className="row">
             <div>
-
-                <h2>Workout #{id}: {workoutName} </h2>
+                <h2>Workout #{id}: 
+                <br/>{workoutName}</h2>
                 <img width= "200" height="200" src={workoutImage} />
     
-                <h3>Sets: {setSets}</h3>
-                <h3>Time: {time} Minute{time>1 ? "s":""}</h3>
+                <h3 className="setreps">Sets: {setSets}
+                <br/>
+                Time: {time} Minute{time>1 ? "s":""}</h3>
             </div>
             </div>
 

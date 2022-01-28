@@ -1,9 +1,9 @@
 .mainroutinepage {
 background-color: black;
 /* background-image: url("../photos/boxinggym.jpg"); */
-background-size: 90%;
-padding-top: 100px;
+/* background-size: 90%; */
 /* padding-left: 200px;
 padding-right: 200px; */
-padding-bottom: 500px;
+padding-bottom: 200px;
+width: 100%;
 }

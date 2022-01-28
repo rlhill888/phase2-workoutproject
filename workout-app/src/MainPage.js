@@ -29,9 +29,9 @@ function MainPage({allGoalOptions, completedForm, currentUser, setCompletedForm}
     <MealPlan currentUser={currentUser}/>
     </div>
 
-    <div>
+    {/* <div>
      <StatsForm currentUser={currentUser}/>
-     </div>
+     </div> */}
      
     <div>
     <WorkoutRoutineTrackerForm currentUser={currentUser}/>
