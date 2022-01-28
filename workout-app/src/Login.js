@@ -3,6 +3,7 @@ import MainPage from "./MainPage";
 import styled from "styled-components";
 import "./Login.css";
 import FormQuestions from "./FormQuestions";
+import MacrosButton from "./MacrosButton";
 
 const Button = styled.button`
      && { background: black;
@@ -88,7 +89,12 @@ function Login({logInStatus,
         }
         if(attemptedAccountAcess.length === 0){
 
+<<<<<<< Updated upstream
             return setLogInError("Incorrect username or password. please try again.");
+=======
+            setLogInError("Incorrect user name or password please try again")
+
+>>>>>>> Stashed changes
         }
         // return console.log(attemptedAccountAcess.length)
         
@@ -111,10 +117,16 @@ function Login({logInStatus,
         e.preventDefault()
 
         const attemptedAccountAcess= userAccounts.filter(account =>{
-            return account.Username === logInUserName && account.Password === logInPassword
+            return account.Username === newUserName && account.Password === newPassword
         })
         if(attemptedAccountAcess.length === 1){
+<<<<<<< Updated upstream
             return setCreateAccountError("Sorry, this account already exists.")
+=======
+
+            return setCreateAccountError("This user name has already been taken")
+
+>>>>>>> Stashed changes
         }
 
         if(attemptedAccountAcess.length === 0){
@@ -190,6 +202,7 @@ if(logInStatus===true && completedForm=== false){
 if(logInStatus===false && showNewUserTab=== true){
 
 return(
+    
 <div className="createaccountdiv"> 
 
 <h2>Create a New Account</h2>
@@ -202,8 +215,15 @@ return(
     <br/>
     <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
+<<<<<<< Updated upstream
 <p>{createAccountError}</p>
 <Button onClick={()=> {
+=======
+
+<p>{createAccountError}</p>
+<Button onClick={()=> {
+
+>>>>>>> Stashed changes
     return setShowNewUserTab(false)
 }}>Exit Account Creation</Button>
 
@@ -230,7 +250,9 @@ if(logInStatus===false || logInStatus=== false && completedForm=== true){
       </form>
       <p className="error">{logInError}</p>
       <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
+      <h3>{logInError}</h3>
     </div>
+  
     <div>
         
         <h2 className="newusertitlequestion">New User?</h2>

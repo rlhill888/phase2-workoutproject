@@ -2,17 +2,16 @@ import React from "react";
 
 
 function FormCard({currentUser, data}){
-
-    function forLoop(){
-        console.log(data)
-        data.map((a)=>{
+    
+const sortedData= data.sort()
+    function mapLoop(){
+        data.forEach((a)=>{
+            console.log(a)
             return (
-                <tr>
-                    <td>workout</td>
-                    <td>workout stat</td>
-                </tr>)
+                <p>something</p>
 
-        })
+        )
+            })
         // return (
         //     <tr>
         //         <td>workout</td>
@@ -27,17 +26,20 @@ function FormCard({currentUser, data}){
 
         <>
         <div>
-
-        <table> 
-            <tr>
-                <th>Workout</th>
-                <th>Workout Stats</th>
-            </tr>
-            {forLoop()}
-        </table>
-            
-        
         <p>form card</p>
+
+        
+
+        {sortedData.map((a)=>{
+            return(<p>{JSON.stringify(a)}</p>)
+        })}
+
+        
+
+        
+           
+        
+       
 
         </div>
         
