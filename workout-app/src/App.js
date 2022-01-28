@@ -17,7 +17,7 @@ function App() {
     .then((resp) => resp.json())
     .then((data) =>{ 
       return setUserAccounts(data)})
-  },[logInStatus,showNewUserTab,currentUser])
+  },[logInStatus,showNewUserTab,currentUser, completedForm])
   useEffect(() =>{
     fetch('http://localhost:3001/Goals')
     .then(res => res.json())
@@ -26,9 +26,9 @@ function App() {
     })
   }, [])
   
+  
   return (
     <Login 
-    completedForm={completedForm}
     setCompletedForm={setCompletedForm}
     userAccounts= {userAccounts} 
     logInStatus ={logInStatus} 
@@ -38,6 +38,7 @@ function App() {
     showNewUserTab={showNewUserTab}
     setCurrentUser={setCurrentUser}
     allGoalOptions={allGoalOptions}
+    completedForm={completedForm}
     currentUser={currentUser}/>
     
   )
