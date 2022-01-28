@@ -238,7 +238,7 @@ if(logInStatus===false || logInStatus=== false && completedForm=== true){
       </form>
       <p className="error">{logInError}</p>
       <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
-      <h3>{logInError}</h3>
+    
     </div>
   
     <div>
@@ -253,6 +253,7 @@ if(logInStatus===false || logInStatus=== false && completedForm=== true){
 }
 if(logInStatus===true && completedForm===true){
     return ( <div className="logoutdiv"> 
+  
 
     <Button onClick={handleLogOut}>Log Out</Button>
 
@@ -260,6 +261,9 @@ if(logInStatus===true && completedForm===true){
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     
     <Stats currentUser={currentUser} />
+    {/* {setLogInError('')}
+    {setCreateAccountError('')} */}
+
 
     </div>
     
