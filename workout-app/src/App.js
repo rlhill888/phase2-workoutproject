@@ -10,13 +10,14 @@ function App() {
   const [showNewUserTab, setShowNewUserTab]= useState(false)
   const [currentUser, setCurrentUser]= useState('')
   const [allGoalOptions, setAllGoalOptions]= useState(null)
+  const [completedForm, setCompletedForm]= useState(false)
 
   useEffect(() => {
     fetch('http://localhost:3001/Accounts')
     .then((resp) => resp.json())
     .then((data) =>{ 
       return setUserAccounts(data)})
-  },[logInStatus,showNewUserTab,currentUser])
+  },[logInStatus,showNewUserTab,currentUser, completedForm])
   useEffect(() =>{
     fetch('http://localhost:3001/Goals')
     .then(res => res.json())
@@ -25,8 +26,10 @@ function App() {
     })
   }, [])
   
+  
   return (
     <Login 
+    setCompletedForm={setCompletedForm}
     userAccounts= {userAccounts} 
     logInStatus ={logInStatus} 
     setLogInStatus={setLogInStatus} 
@@ -35,6 +38,7 @@ function App() {
     showNewUserTab={showNewUserTab}
     setCurrentUser={setCurrentUser}
     allGoalOptions={allGoalOptions}
+    completedForm={completedForm}
     currentUser={currentUser}/>
     
   )

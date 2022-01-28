@@ -57,6 +57,8 @@ font-family: 'Bebas Neue', cursive;
 
 
 function Login({logInStatus, 
+    setCompletedForm,
+    completedForm,
     setLogInStatus, 
     showNewUserTab, 
     setShowNewUserTab, 
@@ -71,7 +73,6 @@ function Login({logInStatus,
     const [logInPassword, setLogInPassword]= useState('')
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
-    const [completedForm, setCompletedForm]= useState(false)
     const [backgroundImage, setBackgroundImage]= useState('')
 
 
@@ -84,13 +85,14 @@ function Login({logInStatus,
         e.preventDefault()
         //filter through our array of user accounts, 
         
+        
         const attemptedAccountAcess= userAccounts.filter(account =>{
             return account.Username === logInUserName && account.Password === logInPassword
         })
 
         if(attemptedAccountAcess.length === 1){
 
-            return setLogInStatus(true), setShowNewUserTab(false), setCurrentUser(attemptedAccountAcess[0]), setCompletedForm(attemptedAccountAcess[0].FormCompleted), setLogInPassword(''), setLogInUserName('')
+            return setLogInStatus(true), setShowNewUserTab(false), setCurrentUser(attemptedAccountAcess[0]),  setLogInPassword(''), setLogInUserName(''), setCompletedForm(attemptedAccountAcess[0].FormCompleted), document.body.style.background = "yellow";
 
         }
         if(attemptedAccountAcess.length === 0){
@@ -113,7 +115,19 @@ function Login({logInStatus,
     }
     
     function handleCreateAccountButton(e){
+        
         e.preventDefault()
+
+        const attemptedAccountAcess= userAccounts.filter(account =>{
+            return account.Username === logInUserName && account.Password === logInPassword
+        })
+        if(attemptedAccountAcess.length === 1){
+            return console.log("User Taken")
+        }
+
+        if(attemptedAccountAcess.length === 0){
+
+        setCompletedForm(true)
         document.body.style.background= null
         handleBg()
         const newAccount= { 
@@ -128,7 +142,7 @@ function Login({logInStatus,
                 bmi: null
         },
             Routines: null,
-            form: null
+            statsForm: []
 
         
     }
@@ -145,9 +159,11 @@ function Login({logInStatus,
             console.log(newAccount)
             setNewUserName('')
             setNewPassword('')
+            
         
         })
         return setShowNewUserTab(false)
+    }
     }
     function handleNewUserNameChange(e){
         return setNewUserName(e.target.value), console.log(newUserName)
@@ -172,11 +188,7 @@ function Login({logInStatus,
     }
     const wrapper = bg ? "App dark" : "App light"
 
-if(logInStatus===true && completedForm=== false){
-    return(
-        <FormQuestions currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} allGoalOptions={allGoalOptions}/>
-    )
-    }
+
 
 if(logInStatus===true && completedForm=== false){
         return(
@@ -199,6 +211,9 @@ return(
     <br/>
     <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
+<button onClick={()=> {
+    return setShowNewUserTab(false)
+}}>Exit Account Creation</button>
 
 </div>)
 
@@ -206,7 +221,7 @@ return(
 }
 
 
-if(logInStatus===false){
+if(logInStatus===false || logInStatus=== false && completedForm=== true){
     return(
         <>
         <div className="wrapper" style={{ backgroundImage: "url(../photos/gym-time-exercise.gif" }}>
@@ -233,14 +248,12 @@ if(logInStatus===false){
     
     )
 }
-if(logInStatus===true){
+if(logInStatus===true && completedForm===true){
     return ( <div className="logoutdiv"> 
 
     <Button onClick={handleLogOut}>Log Out</Button>
 
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
-    </div>
-    
     </div>)
 }
 }
