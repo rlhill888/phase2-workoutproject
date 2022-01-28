@@ -640,6 +640,7 @@
         "bmi": "28.0",
         "activityLevel": "Moderate exercise 3-5 times a week",
         "bmr": 1491.5
+<<<<<<< HEAD
       },
       "Routines": {
         "Leg Day": [
@@ -781,60 +782,36 @@
         "bmi": "30.0",
         "activityLevel": "Moderate exercise 3-5 times a week",
         "bmr": 1607.2
+=======
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
       },
       "Routines": {
         "Leg Day": [
           {
             "id": 1,
-            "name": "Treadmil Run",
+            "name": "Weighted Squats",
             "Description": "",
-            "Image": "https://i.pinimg.com/originals/21/a0/28/21a028cc52af863d74ddf8e07cf381af.gif",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/barbellsquat-1491916408.gif",
             "sets": null,
-            "time": 15,
+            "reps": 8,
             "weight": null
           },
           {
             "id": 2,
-            "name": "Cycling",
+            "name": "Hamstring Curl",
             "Description": "",
-            "Image": "https://images.wsj.net/im-319970?width=10&height=5",
+            "Image": "https://www.verywellfit.com/thmb/deKoSPO2qE_sNWGEAM14w4al7iY=/3000x2000/filters:fill(FFDB5D,1)/45-3498304-Leg-Curls-GIF-aa13a58de5a744719617eb7155357877.gif",
             "sets": null,
-            "time": 15,
+            "reps": 8,
             "weight": null
           },
           {
             "id": 3,
-            "name": "Weighted Squats",
-            "Description": "",
-            "Image": "https://images.wsj.net/im-319970?width=10&height=5",
-            "sets": null,
-            "reps": 20,
-            "weight": null
-          },
-          {
-            "id": 4,
             "name": "Dead Lifts",
             "Description": "",
-            "Image": "https://images.wsj.net/im-319970?width=10&height=5",
+            "Image": "https://qph.fs.quoracdn.net/main-qimg-9ceca1a5fbba29dcc66eb08144ab720c",
             "sets": null,
-            "reps": 20,
-            "weight": null
-          },
-          {
-            "id": 5,
-            "name": "Sit ups",
-            "Description": "",
-            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/situpeccentric-1472151762.gif",
-            "sets": null,
-            "reps": 20,
-            "weight": null
-          },
-          {
-            "id": 6,
-            "name": "Bicycle Crunch",
-            "Description": "",
-            "Image": "https://j.gifs.com/El371k@large.gif?download=true",
-            "sets": null,
+<<<<<<< HEAD
             "time": 1.5,
             "weight": null
           },
@@ -1231,6 +1208,8 @@
             "Description": "",
             "Image": "https://qph.fs.quoracdn.net/main-qimg-9ceca1a5fbba29dcc66eb08144ab720c",
             "sets": null,
+=======
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
             "reps": 8,
             "weight": null
           },
@@ -1240,7 +1219,11 @@
             "Description": "",
             "Image": "https://thumbs.gfycat.com/PeskyRepentantDwarfmongoose-size_restricted.gif",
             "sets": null,
+<<<<<<< HEAD
             "reps": 10,
+=======
+            "reps": 12,
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
             "weight": null
           }
         ],
@@ -1260,7 +1243,11 @@
             "Description": "",
             "Image": "https://media.gq.com/photos/5b75f187cc22243dc6ea0c59/master/w_1600%2Cc_limit/Scruggs-Chest-GIF9-2.gif",
             "sets": null,
+<<<<<<< HEAD
             "reps": 15,
+=======
+            "reps": 10,
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
             "weight": null
           },
           {
@@ -1316,7 +1303,11 @@
             "Description": "",
             "Image": "https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/reverseEZ.gif",
             "sets": null,
+<<<<<<< HEAD
             "reps": 10,
+=======
+            "reps": 8,
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
             "weight": null
           },
           {
@@ -1331,6 +1322,7 @@
         ]
       },
       "statsForm": [],
+<<<<<<< HEAD
       "id": 6
     },
     {
@@ -1345,6 +1337,22 @@
         "bmi": "24.2",
         "activityLevel": "Moderate exercise 3-5 times a week",
         "bmr": 1523.7
+=======
+      "id": 2
+    },
+    {
+      "Username": "looseweight",
+      "Password": "1",
+      "FormCompleted": true,
+      "data": {
+        "age": "29",
+        "weight": "180",
+        "height": 65,
+        "goals": "To Loose Overall Weight",
+        "bmi": "30.0",
+        "activityLevel": "Moderate exercise 3-5 times a week",
+        "bmr": 1607.2
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
       },
       "Routines": {
         "Leg Day": [
@@ -1471,6 +1479,7 @@
           }
         ]
       },
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       "statsForm": [
         [
@@ -1628,19 +1637,23 @@
           }
         ]
       },
+=======
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
       "statsForm": [],
       "id": 3
     },
     {
-      "Username": "asdf",
+      "Username": "toneup",
       "Password": "1",
       "FormCompleted": true,
       "data": {
-        "age": "1",
-        "weight": "1",
-        "height": 13,
+        "age": "27",
+        "weight": "155",
+        "height": 60,
         "goals": "To Tone muscles and get muscle definition",
-        "bmi": "4.2"
+        "bmi": "30.3",
+        "activityLevel": "Little or no exercise",
+        "bmr": 1484.35
       },
       "Routines": {
         "Back and Biceps": [
@@ -1825,7 +1838,7 @@
       "id": 4
     },
     {
-      "Username": "asdf",
+      "Username": "GainWeight",
       "Password": "1",
       "FormCompleted": false,
       "data": {
@@ -1840,31 +1853,19 @@
       "id": 5
     },
     {
-      "Username": "asdf",
+      "Username": "gainweight1",
       "Password": "1",
-      "FormCompleted": false,
+      "FormCompleted": true,
       "data": {
-        "age": null,
-        "weight": null,
-        "height": null,
-        "goals": null,
-        "bmi": null
+        "age": "20",
+        "weight": "143",
+        "height": 66,
+        "goals": "To Gain Overall Weight",
+        "bmi": "23.1",
+        "activityLevel": "Light exercise a few times a week",
+        "bmr": 1493.25
       },
-      "Routines": null,
-      "statsForm": [],
-      "id": 6
-    },
-    {
-      "Username": "asdf",
-      "Password": "1",
-      "FormCompleted": false,
-      "data": {
-        "age": null,
-        "weight": null,
-        "height": null,
-        "goals": null,
-        "bmi": null
-      },
+<<<<<<< HEAD
       "Routines": null,
 =======
 >>>>>>> Stashed changes
@@ -1887,22 +1888,153 @@
         "height": null,
         "goals": null,
         "bmi": null
+=======
+      "Routines": {
+        "Leg Day": [
+          {
+            "id": 1,
+            "name": "Weighted Squats",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2017/04/barbellsquat-1491916408.gif",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          },
+          {
+            "id": 2,
+            "name": "Hamstring Curl",
+            "Description": "",
+            "Image": "https://www.verywellfit.com/thmb/deKoSPO2qE_sNWGEAM14w4al7iY=/3000x2000/filters:fill(FFDB5D,1)/45-3498304-Leg-Curls-GIF-aa13a58de5a744719617eb7155357877.gif",
+            "sets": null,
+            "reps": 10,
+            "weight": null
+          },
+          {
+            "id": 3,
+            "name": "Dead Lifts",
+            "Description": "",
+            "Image": "https://qph.fs.quoracdn.net/main-qimg-9ceca1a5fbba29dcc66eb08144ab720c",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          },
+          {
+            "id": 4,
+            "name": "Weighted Lunges",
+            "Description": "",
+            "Image": "https://thumbs.gfycat.com/PeskyRepentantDwarfmongoose-size_restricted.gif",
+            "sets": null,
+            "reps": 10,
+            "weight": null
+          }
+        ],
+        "Chest and Triceps": [
+          {
+            "id": 1,
+            "name": "Bench Press",
+            "Description": "",
+            "Image": "https://davidblyth.co.uk/wp-content/uploads/2020/09/00251301-Barbell-Bench-Press_Chest_1080.gif",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          },
+          {
+            "id": 2,
+            "name": "Dips",
+            "Description": "",
+            "Image": "https://media.gq.com/photos/5b75f187cc22243dc6ea0c59/master/w_1600%2Cc_limit/Scruggs-Chest-GIF9-2.gif",
+            "sets": null,
+            "reps": 15,
+            "weight": null
+          },
+          {
+            "id": 3,
+            "name": "Pushups",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pushup-1462808858.gif",
+            "sets": null,
+            "reps": 15,
+            "weight": null
+          },
+          {
+            "id": 4,
+            "name": "Chest Flys",
+            "Description": "",
+            "Image": "https://media.gq.com/photos/5b75f667b32f4e4b6699bbad/master/w_1600%2Cc_limit/Scruggs-Chest-GIF1-2.gif",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          },
+          {
+            "id": 5,
+            "name": "Dumbell Press",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/dumbbellbenchpress-1457043820.gif",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          }
+        ],
+        "Back and Biceps": [
+          {
+            "id": 1,
+            "name": "Pullups",
+            "Description": "",
+            "Image": "https://media.gq.com/photos/5b637298649a373331a32228/master/w_1600%2Cc_limit/Dana-scruggs-fitness-GQ3227-W-GIF4.gif",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          },
+          {
+            "id": 2,
+            "name": "Pulldowns",
+            "Description": "",
+            "Image": "https://blog.goodlifefitness.com/media/3682/closegriplatpulldown_male-1.gif?quality=100",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          },
+          {
+            "id": 3,
+            "name": "Bicep Curls",
+            "Description": "",
+            "Image": "https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/reverseEZ.gif",
+            "sets": null,
+            "reps": 10,
+            "weight": null
+          },
+          {
+            "id": 4,
+            "name": "Bent Barbell Rows",
+            "Description": "",
+            "Image": "https://images.ctfassets.net/8urtyqugdt2l/59NFoxuLAb0Wvoy4xpYajl/7b4556030c11107ca7d8cdbd610b1813/_uploads_1569314293-male-barbell-row.gif",
+            "sets": null,
+            "reps": 8,
+            "weight": null
+          }
+        ]
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
       },
-      "Routines": null,
       "statsForm": [],
+<<<<<<< HEAD
       "id": 8
 <<<<<<< Updated upstream
+=======
+      "id": 6
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
     },
     {
-      "Username": "haha",
+      "Username": "gain",
       "Password": "1",
       "FormCompleted": true,
       "data": {
-        "age": "1",
-        "weight": "1",
-        "height": 13,
+        "age": "20",
+        "weight": "150",
+        "height": 66,
         "goals": "To Gain Overall Weight",
-        "bmi": "4.2"
+        "bmi": "24.2",
+        "activityLevel": "Moderate exercise 3-5 times a week",
+        "bmr": 1523.7
       },
       "Routines": {
         "Leg Day": [
@@ -2030,9 +2162,29 @@
         ]
       },
       "statsForm": [],
+<<<<<<< HEAD
       "id": 9
 =======
 >>>>>>> Stashed changes
+=======
+      "id": 7
+    },
+    {
+
+      "Username": "3",
+      "Password": "3",
+      "FormCompleted": false,
+      "data": {
+        "age": null,
+        "weight": null,
+        "height": null,
+        "goals": null,
+        "bmi": null
+      },
+      "Routines": null,
+      "statsForm": [],
+      "id": 8
+>>>>>>> a228bc3ee1a53066898e2038f9e839026eef2f41
     }
   ]
 }

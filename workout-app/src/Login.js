@@ -89,12 +89,8 @@ function Login({logInStatus,
         }
         if(attemptedAccountAcess.length === 0){
 
-<<<<<<< Updated upstream
-            return setLogInError("Incorrect username or password. please try again.");
-=======
             setLogInError("Incorrect user name or password please try again")
 
->>>>>>> Stashed changes
         }
         // return console.log(attemptedAccountAcess.length)
         
@@ -120,13 +116,9 @@ function Login({logInStatus,
             return account.Username === newUserName && account.Password === newPassword
         })
         if(attemptedAccountAcess.length === 1){
-<<<<<<< Updated upstream
-            return setCreateAccountError("Sorry, this account already exists.")
-=======
 
             return setCreateAccountError("This user name has already been taken")
 
->>>>>>> Stashed changes
         }
 
         if(attemptedAccountAcess.length === 0){
@@ -215,15 +207,10 @@ return(
     <br/>
     <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
-<<<<<<< Updated upstream
-<p>{createAccountError}</p>
-<Button onClick={()=> {
-=======
 
 <p>{createAccountError}</p>
 <Button onClick={()=> {
 
->>>>>>> Stashed changes
     return setShowNewUserTab(false)
 }}>Exit Account Creation</Button>
 

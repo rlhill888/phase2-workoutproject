@@ -49,17 +49,8 @@ if(goals===toneMuscle){
         <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
         <h2>Here are your Macros:</h2>
 
-<<<<<<< Updated upstream
-        <h2>what are macros?</h2>
-        <p>Macronutrients, or "macros", consist of carbohydrates, fat, and protein.</p>
-        <p>They are the nutrients the body needs in large quantities.</p>
-        <p>Keeping track of your macros can help you make smart, healthy food choices.</p>
-            
-             {/* (have button to click) */}
-=======
 
         <MacrosButton />
->>>>>>> Stashed changes
 
         <br/>
         <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals</h2>
@@ -105,17 +96,8 @@ if(goals===looseWEight){
 
         <h2>Here are your Macros</h2>
 
-<<<<<<< Updated upstream
-        <h2>what are macros?</h2>
-        <p>Macronutrients, or "macros", consist of carbohydrates, fat, and protein.</p>
-        <p>They are the nutrients the body needs in large quantities.</p>
-        <p>Keeping track of your macros can help you make smart, healthy food choices.</p>
-            
-             {/* (have button to click) */}
-=======
         <MacrosButton />
 
->>>>>>> Stashed changes
         <br/>
         <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals</h2>
         <h3>Calories: {calories}</h3>
@@ -157,18 +139,8 @@ if(goals===gainMuscleMass){
         <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
 
         <h2>Here are your Macros</h2>
-<<<<<<< Updated upstream
-        
-        <h2>what are macros?</h2>
-        <p>Macronutrients, or "macros", consist of carbohydrates, fat, and protein.</p>
-        <p>They are the nutrients the body needs in large quantities.</p>
-        <p>Keeping track of your macros can help you make smart, healthy food choices.</p>
-            
-             {/* (have button to click) */}
-=======
 
        <MacrosButton />
->>>>>>> Stashed changes
         <br/>
         <h2>In order to gain mucle mass, you should try to consume these daily macros to achieve your goals</h2>
         <h3>Calories: {calories}</h3>
@@ -200,29 +172,15 @@ if(goals===gainWeight){
     
     return(
         <>
-<<<<<<< Updated upstream
-        <h1 className="mealplantitle">Here is your meal plan when it comes to gaining weight :</h1>
-=======
->>>>>>> Stashed changes
 
         <h1>Here is your meal plan when it comes to gaining weight:</h1>
 
         <br/>
 
         <h2>Here are your Macros</h2>
-<<<<<<< Updated upstream
-        
-        <h2>what are macros?</h2>
-        <p>Macronutrients, or "macros", consist of carbohydrates, fat, and protein.</p>
-        <p>They are the nutrients the body needs in large quantities.</p>
-        <p>Keeping track of your macros can help you make smart, healthy food choices.</p>
-            
-             {/* (have button to click) */}
-=======
 
         <br/>
         <MacrosButton />
->>>>>>> Stashed changes
 
         <br/>
         <h2>In order to gain weight, you should try to consume these daily macros to achieve your goals</h2>
