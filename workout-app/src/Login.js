@@ -206,10 +206,10 @@ return(
     <label name="createNewPassword" /> Password: <label/>
     <Input onChange={handleNewPasswordChange}type="password" name="createPassword" />
     <br/>
-    <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
+    <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account" className="submit" />
 </form>
 
-<p>{createAccountError}</p>
+<p className="error">{createAccountError}</p>
 <Button onClick={()=> {
 
     return setShowNewUserTab(false)
