@@ -38,11 +38,14 @@ function WorkoutRoutineTrackerForm({currentUser}){
     }
     if(formType==="Back and Biceps"){
         return(<> 
-        <div>
+        <div >
         <h1 className="formtitle">Back and Biceps Form</h1>
+        <div className= 'forms'>
         <WorkoutTrackerCard routineName="Back and Biceps" routines={routines["Back and Biceps"]}/>
 
-        <Button onClick={()=> setFormType('none')}>Close Form</Button>
+<Button onClick={()=> setFormType('none')}>Close Form</Button>
+        </div>
+       
 
         </div>
         </>)
@@ -51,9 +54,12 @@ function WorkoutRoutineTrackerForm({currentUser}){
     if(formType==="Chest and Triceps"){
         return(<> 
         <h1 className="formtitle">Chest and Triceps Form</h1>
+        <div className= 'forms'>
         <WorkoutTrackerCard routineName="Chest and Triceps" routines={routines["Chest and Triceps"]}/>
 
-        <Button onClick={()=> setFormType('none')}>Close Form</Button>
+<Button onClick={()=> setFormType('none')}>Close Form</Button>
+        </div>
+        
 
         
         
@@ -63,8 +69,9 @@ function WorkoutRoutineTrackerForm({currentUser}){
     if(formType==="Leg Day"){
         return(<> 
         <h1 className="formtitle">Leg Day Form</h1>
-        <WorkoutTrackerCard routineName="Leg Day" routines={routines["Leg Day"]}/>
-        <Button onClick={()=> setFormType('none')}>Close Form</Button>
+        <div className= 'forms'><WorkoutTrackerCard routineName="Leg Day" routines={routines["Leg Day"]}/>
+        <Button onClick={()=> setFormType('none')}>Close Form</Button></div>
+        
 
         
         
@@ -75,7 +82,10 @@ if(showForm===false){
     return(
 
         <>
+        <div className= 'buttTab'>
         <Button onClick={handleButtonClick} >Track a New Workout</Button>
+        </div>
+       
 
         {/* <p>{currentUser.Username}</p>
         <WorkoutTrackerCard /> */}
@@ -86,20 +96,23 @@ if(showForm===true){
     return(
 
         <>
+        <div className= 'buttonTab'>
         <Button onClick={handleButtonClick} >Close Workout Form</Button>
 
-        <br/>
-        <label name="routineLabel"> Which Routine would you like to track?</label>
-        <br/>
-        {routinesArray.map((a) =>{ 
-            return( 
-                
-            <>
-            <br/>
-            <Button onClick={() =>handleRoutineTypeClick(a)}>{a}</Button> 
+<br/>
+<label name="routineLabel"> Which Routine would you like to track?</label>
+<br/>
+{routinesArray.map((a) =>{ 
+    return( 
+        
+    <>
+    <br/>
+    <Button onClick={() =>handleRoutineTypeClick(a)}>{a}</Button> 
 
-            </>)})}
+    </>)})}
 
+        </div>
+       
 
         
         </>

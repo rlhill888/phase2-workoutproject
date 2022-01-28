@@ -4,6 +4,7 @@ import styled from "styled-components";
 import "./Login.css";
 import FormQuestions from "./FormQuestions";
 import MacrosButton from "./MacrosButton";
+import Stats from "./Stats";
 
 const Button = styled.button`
      && { background: black;
@@ -255,7 +256,10 @@ if(logInStatus===true && completedForm===true){
 
     <Button onClick={handleLogOut}>Log Out</Button>
 
+
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
+    
+    <Stats currentUser={currentUser} />
 
     </div>
     
