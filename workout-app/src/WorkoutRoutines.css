@@ -7,9 +7,10 @@
 .column {
     float: left;
     width: 33.33%;
+  
     background-image: url("../photos/blurorangebg.jpeg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
-    
+   
   }

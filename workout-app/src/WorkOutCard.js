@@ -27,10 +27,12 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
     if(showTime===true){
         return(
             <>
+
             {/* <div className="boo">
             <div className="boo2"> */}
             <div className="row">
             <div>
+
                 <h2>Workout #{id}: {workoutName} </h2>
                 <img width= "200" height="200" src={workoutImage} />
     
@@ -44,4 +46,3 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
         }
 }
 export default WorkOutCard;
-

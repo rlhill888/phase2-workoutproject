@@ -14,9 +14,14 @@ return(
     <h2 className="workoutroutinetitle">Here are your workout routines:</h2>
     
     {routinesArray.map((array) =>{ 
-            return <WorkoutRoutines routine={array} currentUser={currentUser} key={array} name={array} 
+            return (
+                <>
+            <div className="routine"> <WorkoutRoutines routine={array} currentUser={currentUser} key={array} name={array}/></div>
+            <br/>
+            </>
             
-            />
+            
+            )
             
         })}
      </>

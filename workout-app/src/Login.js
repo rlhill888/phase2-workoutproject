@@ -65,17 +65,19 @@ function Login({logInStatus,
     setUserAccounts,
     allGoalOptions,
     setCurrentUser }){
-    
+ 
     
     const [logInUserName, setLogInUserName]= useState('')
     const [logInPassword, setLogInPassword]= useState('')
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
     const [completedForm, setCompletedForm]= useState(false)
+    const [backgroundImage, setBackgroundImage]= useState('')
 
 
     const [bg, setBg] = useState(false)
 
+    
 
     function hanldeLogIn(e){
 
@@ -102,14 +104,18 @@ function Login({logInStatus,
         
     }
     function handleLogOut(){
+        document.body.style.background= null
         return setLogInStatus(false), setShowNewUserTab(false), setCurrentUser('')
     }
     function handleNewUserButton(){
+        handleBg()
         return setShowNewUserTab(true)
     }
     
     function handleCreateAccountButton(e){
         e.preventDefault()
+        document.body.style.background= null
+        handleBg()
         const newAccount= { 
             Username: newUserName,
             Password: newPassword,
@@ -157,9 +163,19 @@ function Login({logInStatus,
         return setLogInPassword(e.target.value)
 
     }
+    function changeBackground(color) {
+        document.body.style.background = color;
+     }
 
     function handleBg() {
         setBg((bg) => !bg) ;
+    }
+    const wrapper = bg ? "App dark" : "App light"
+
+if(logInStatus===true && completedForm=== false){
+    return(
+        <FormQuestions currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} allGoalOptions={allGoalOptions}/>
+    )
     }
 
 if(logInStatus===true && completedForm=== false){
@@ -169,10 +185,12 @@ if(logInStatus===true && completedForm=== false){
             }
 
 if(logInStatus===false && showNewUserTab=== true){
+
 return(
 <div className="createaccountdiv"> 
+
 <h2>Create a New Account</h2>
-<form className="new-form">
+<form className="#new-form">
     <label name="createNewUserName" /> Username: <label/>
     <Input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
     <br/>
@@ -183,6 +201,7 @@ return(
 </form>
 
 </div>)
+
 
 }
 
@@ -205,7 +224,9 @@ if(logInStatus===false){
       <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
     </div>
     <div>
+        
         <h2 className="newusertitlequestion">New User?</h2>
+
         <Button onClick={handleNewUserButton}>Register</Button>
          </div>
     </>
@@ -214,9 +235,11 @@ if(logInStatus===false){
 }
 if(logInStatus===true){
     return ( <div className="logoutdiv"> 
+
     <Button onClick={handleLogOut}>Log Out</Button>
 
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
+    </div>
     
     </div>)
 }
