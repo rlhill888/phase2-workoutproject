@@ -21,7 +21,7 @@ function StatsForm({currentUser}){
         <>
         <h2>Past workouts: </h2>
         {userForms.map((a)=>{
-                return <FormCard data={userForms} />
+                return <FormCard data={a} />
             
             
         })}
