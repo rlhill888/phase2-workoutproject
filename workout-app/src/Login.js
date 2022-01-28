@@ -12,6 +12,7 @@ const Button = styled.button`
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 50px;
+    padding: 10px;
     }
 
     &:hover {
@@ -42,19 +43,6 @@ font-size: 20px;
 font-family: 'Bebas Neue', cursive;
 `;
 
-// const H1 = styled.h1`
-//     text-family: monospace;
-// `
-
-// const Input = styled.input`
-//     padding: 0.5em;
-//     margin: 0.5em;
-//     color: ${props => props.inputColor || "red"};
-//     background: green;
-//     border: none;border
-// `;
-
-
 
 function Login({logInStatus, 
     setCompletedForm,
@@ -66,9 +54,8 @@ function Login({logInStatus,
     currentUser,
     setUserAccounts,
     allGoalOptions,
-    setCurrentUser,
-    completedForm,
-    setCompletedForm }){
+    setCurrentUser
+ }){
  
     
     const [logInUserName, setLogInUserName]= useState('')
@@ -76,6 +63,8 @@ function Login({logInStatus,
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
     const [backgroundImage, setBackgroundImage]= useState('')
+    const [logInError, setLogInError]= useState('')
+    const [createAccountError, setCreateAccountError]= useState('')
 
 
     const [bg, setBg] = useState(false)
@@ -94,11 +83,12 @@ function Login({logInStatus,
 
         if(attemptedAccountAcess.length === 1){
 
-            return setLogInStatus(true), setShowNewUserTab(false), setCurrentUser(attemptedAccountAcess[0]),  setLogInPassword(''), setLogInUserName(''), setCompletedForm(attemptedAccountAcess[0].FormCompleted), document.body.style.background = "yellow";
+            return setLogInStatus(true), setShowNewUserTab(false), setCurrentUser(attemptedAccountAcess[0]),  setLogInPassword(''), setLogInUserName(''), setCompletedForm(attemptedAccountAcess[0].FormCompleted), document.body.style.background = "black";
 
         }
         if(attemptedAccountAcess.length === 0){
-            console.log("Incorrect user name or password please try again")
+
+            return setLogInError("Incorrect username or password. please try again.");
         }
         // return console.log(attemptedAccountAcess.length)
         
@@ -124,7 +114,7 @@ function Login({logInStatus,
             return account.Username === logInUserName && account.Password === logInPassword
         })
         if(attemptedAccountAcess.length === 1){
-            return console.log("User Taken")
+            return setCreateAccountError("Sorry, this account already exists.")
         }
 
         if(attemptedAccountAcess.length === 0){
@@ -203,7 +193,7 @@ return(
 <div className="createaccountdiv"> 
 
 <h2>Create a New Account</h2>
-<form className="#new-form">
+<form>
     <label name="createNewUserName" /> Username: <label/>
     <Input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
     <br/>
@@ -212,9 +202,10 @@ return(
     <br/>
     <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
-<button onClick={()=> {
+<p>{createAccountError}</p>
+<Button onClick={()=> {
     return setShowNewUserTab(false)
-}}>Exit Account Creation</button>
+}}>Exit Account Creation</Button>
 
 </div>)
 
@@ -225,7 +216,7 @@ return(
 if(logInStatus===false || logInStatus=== false && completedForm=== true){
     return(
         <>
-        <div className="wrapper" style={{ backgroundImage: "url(../photos/gym-time-exercise.gif" }}>
+        <div className="wrapper">
         
       <img src={require ("./workout4melogo.png")} alt="mainlogo" width="300" height="300" />
       <h2>The expertise you need to achieve your fitness goals</h2>
@@ -237,6 +228,7 @@ if(logInStatus===false || logInStatus=== false && completedForm=== true){
            <input onChange= {handleLoginPassword} type= "password" className="input"/>
          </label>
       </form>
+      <p className="error">{logInError}</p>
       <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
     </div>
     <div>

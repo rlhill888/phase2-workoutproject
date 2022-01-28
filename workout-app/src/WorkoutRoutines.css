@@ -2,19 +2,26 @@
     color: yellow;
     text-align: center;
     width: 500px;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .column {
-    float: center;
-    width: 33.3%;
-  
+    /* float: center;
+    width: 100%;
+   */
     /* background-image: url("../photos/blurorangebg.jpeg"); */
-    background-color: white;
+    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border: 4mm ridge rgba(0, 0, 0, 0.6);
-    display: 'flex';
-    
+    border: 4mm ridge rgba(0, 0, 0.5, 0.6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    display: flex;
    
+  }
+
+  .rowcard {
+      display: flex;
   }

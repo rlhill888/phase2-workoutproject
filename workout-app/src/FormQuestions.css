@@ -72,12 +72,13 @@
       font-family: 'Bebas Neue', cursive;
       font-size: 20px;
       margin: 20px;
+      padding: 10px;
   }
   
   .submit:hover {
     background: yellow;
     color: black;
-    transition: 0.3s;
+    transition-duration: 1.3s;
   
   }
 
