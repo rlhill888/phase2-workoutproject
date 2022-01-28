@@ -8,16 +8,12 @@ body {
 
   background-color: black;
   background-image: url("../photos/gym-time-exercise.gif");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   text-align: center;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 
 h1 {
   font-family: 'Bebas Neue', cursive;
@@ -48,6 +44,7 @@ p {
   text-align: center;
   font-size: 20px;
   font-family: 'Bebas Neue', cursive;
+  opacity: 0.6;
 }
 
 
@@ -68,6 +65,7 @@ p {
 .submit:hover {
   background: yellow;
   color: black;
+  transition: 0.3s;
 
 }
 
@@ -96,4 +94,27 @@ p {
   color: var(--font-color);
   box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
   border-radius: 10px;
+}
+
+
+.newusertitlequestion {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.logoutdiv {
+  background-color: black;
+}
+
+
+
+/* Create a New Account CSS code */
+
+.createaccountdiv {
+  background-color: black;
+  background-image: url("../photos/gymphotobg.jpeg");
+  padding-top: 200px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 500px;
 }

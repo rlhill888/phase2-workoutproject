@@ -76,37 +76,42 @@ function FormQuestions({allGoalOptions, completedForm, currentUser, setCompleted
         <>
          <div className="tea">
 
-        <h2>Since this is your first time on our site, <br/> answer these questions to get a customized Workout and Meal Plan</h2>
+        <h2 className="firsttimetitle">Since this is your first time on our site, <br/> answer these questions to get a customized Workout and Meal Plan :</h2>
        
         <form onSubmit={handleSubmit} >
-           
+           <div className="form">
             <label name= "Age" /> How old are you? <label/>
-            <input onChange={handleAgeChange} name="Age" type="number" placeholder="Your age here"/>
+            <input onChange={handleAgeChange} name="Age" type="number" placeholder="Age in years" className="inputbox"/>
 
             <br/>
-            <label name= "Weight Question" className="tea2"/> How much do you weigh? <label/>
-            <input onChange= {handleWeightChange} name =" Weight Question" type="number" placeholder="Weight in pounds" />
-            <br/>
-            <label name= "Height Question" className="tea2"/> What is your height? <label/>
-            <input onChange={handleHeightFeetChange} name= "Height Question feet" type="number" placeholder="5" min="0"/> ft
-                     <input onChange={handleHeightInchesChange} name= "Height Question inches" type="number" placeholder="6" min ="0" max="11" /> in
-            <br/>
+            <label name= "Weight Question" /> How much do you weigh? <label/>
+            <input onChange= {handleWeightChange} name = "Weight Question" type="number" placeholder="Weight in pounds" className="inputbox"/>
 
+            <br/>
+            <label name= "Height Question" /> What is your height? <label/>
+            <input onChange={handleHeightFeetChange} name= "Height Question feet" type="number" placeholder="5" min="0" className="inputbox2"/> ft
+            <input onChange={handleHeightInchesChange} name= "Height Question inches" type="number" placeholder="6" min ="0" max="11" className="inputbox2"/> in
+           
+            <br/>
             <label name ="goals" /> What is your main goal for working out? <label/>
             <br/>
-            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value= "To Gain Overall Weight"/> To gain overall weight
+            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value= "To Gain Overall Weight" className="radio" /> To gain overall weight
             <br/>
-            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value= "To Loose Overall Weight"/> To lose overall weight
+            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value= "To Loose Overall Weight" className="radio" /> To lose overall weight
             <br />
-            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value="To gain muscle mass"/> To gain muscle mass
+            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value="To gain muscle mass" className="radio" /> To gain muscle mass
             <br/>
 
-            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value="To Tone muscles and get muscle definition"/> To tone muscles and get muscle definition 
+            <input onClick={handleGoalAnswer} name ="goals"  type="radio" value="To Tone muscles and get muscle definition" className="radio" /> To tone muscles and get muscle definition 
 
             <br/>
-            <p>Based on the answers to these questions we will make a customized workout and meal plan catered to you.</p>
+            <h2 className="based">Based on your answers<br/>
+             you will receive a workout and meal plan catered to you</h2>
+            </div>
+            <div className="submitdiv">
             <input type="submit" value="Submit" className="submit"/>
-
+            </div>
+          
 
         </form>
         </div>
