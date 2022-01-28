@@ -64,14 +64,15 @@ function Login({logInStatus,
     currentUser,
     setUserAccounts,
     allGoalOptions,
-    setCurrentUser }){
+    setCurrentUser,
+    completedForm,
+    setCompletedForm }){
  
     
     const [logInUserName, setLogInUserName]= useState('')
     const [logInPassword, setLogInPassword]= useState('')
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
-    const [completedForm, setCompletedForm]= useState(false)
     const [backgroundImage, setBackgroundImage]= useState('')
 
 
@@ -128,7 +129,7 @@ function Login({logInStatus,
                 bmi: null
         },
             Routines: null,
-            form: null
+            statusForm: null
 
         
     }
@@ -206,12 +207,12 @@ return(
 }
 
 
-if(logInStatus===false){
+if(logInStatus===false || logInStatus=== false && completedForm=== true){
     return(
         <>
         <div className="wrapper" style={{ backgroundImage: "url(../photos/gym-time-exercise.gif" }}>
         
-      <img src={require ("./mainlogo.png")} alt="mainlogo" width="300" height="300" />
+      <img src={require ("./workout4melogo.png")} alt="mainlogo" width="300" height="300" />
       <h2>The expertise you need to achieve your fitness goals</h2>
       <form className="mainform">
          <label>
@@ -241,7 +242,7 @@ if(logInStatus===true){
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     </div>
     
-    </div>)
+  )
 }
 }
 
