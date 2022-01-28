@@ -64,6 +64,7 @@ p {
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
     margin: 0 20 20 20px;
+    opacity: 1;
 }
 
 .submit:hover {
@@ -119,7 +120,9 @@ p {
   background-color: black;
 }
 
-
+.error {
+  color: red;
+}
 
 /* Create a New Account CSS code */
 

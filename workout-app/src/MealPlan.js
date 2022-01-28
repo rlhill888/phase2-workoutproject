@@ -47,13 +47,13 @@ if(goals===toneMuscle){
         <br/>
         <div>
         <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
-        <h2>Here are your Macros:</h2>
+        <h2>Here are your Macros :</h2>
 
 
         <MacrosButton />
 
         <br/>
-        <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals</h2>
+        <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals :</h2>
         <h3>Calories: {calories}</h3>
         <h3>Carbs: {carbs} grams</h3>
         <h3>Protein: {protein} grams</h3>
@@ -94,12 +94,12 @@ if(goals===looseWEight){
 
         {/* <p>paragraph explaining what foods to eat, and what foods to stay away from</p> */}
 
-        <h2>Here are your Macros</h2>
+        <h2>Here are your Macros :</h2>
 
         <MacrosButton />
 
         <br/>
-        <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals</h2>
+        <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals :</h2>
         <h3>Calories: {calories}</h3>
         <h3>Carbs: {carbs} grams</h3>
         <h3>Protein: {protein} grams</h3>
@@ -138,11 +138,11 @@ if(goals===gainMuscleMass){
 
         <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
 
-        <h2>Here are your Macros</h2>
+        <h2>Here are your Macros :</h2>
 
        <MacrosButton />
         <br/>
-        <h2>In order to gain mucle mass, you should try to consume these daily macros to achieve your goals</h2>
+        <h2>In order to gain mucle mass, you should try to consume these daily macros to achieve your goals :</h2>
         <h3>Calories: {calories}</h3>
         <h3>Carbs: {carbs} grams</h3>
         <h3>Protein: {protein} grams</h3>
@@ -173,17 +173,17 @@ if(goals===gainWeight){
     return(
         <>
 
-        <h1>Here is your meal plan when it comes to gaining weight:</h1>
+        <h1 className="mealplantitle" >Here is your meal plan when it comes to gaining weight:</h1>
 
         <br/>
 
-        <h2>Here are your Macros</h2>
+        <h2>Here are your Macros :</h2>
 
         <br/>
         <MacrosButton />
 
         <br/>
-        <h2>In order to gain weight, you should try to consume these daily macros to achieve your goals</h2>
+        <h2>In order to gain weight, you should try to consume these daily macros to achieve your goals :</h2>
         <h3>Calories: {calories}</h3>
         <h3>Carbs: {carbs} grams</h3>
         <h3>Protein: {protein} grams</h3>
