@@ -8,6 +8,7 @@ body {
 
   background-color: black;
   background-image: url("../photos/gym-time-exercise.gif");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -71,11 +72,12 @@ p {
 
 }
 
-.new-form {
-  background-color: black;
+.new-user-form {
+  
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   font-size: 20px;
+  background-image: url("../photos/gymphotobg.jpeg");
 }
 
 

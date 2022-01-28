@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import MainPage from "./MainPage";
 import styled from "styled-components";
 import "./Login.css";
+import FormQuestions from "./FormQuestions";
 
 const Button = styled.button`
      && { background: black;
@@ -60,17 +61,19 @@ function Login({logInStatus,
     setUserAccounts,
     allGoalOptions,
     setCurrentUser }){
-    
+ 
     
     const [logInUserName, setLogInUserName]= useState('')
     const [logInPassword, setLogInPassword]= useState('')
     const [newUserName, setNewUserName]= useState('')
     const [newPassword, setNewPassword]= useState('')
     const [completedForm, setCompletedForm]= useState(false)
+    const [backgroundImage, setBackgroundImage]= useState('')
 
 
     const [bg, setBg] = useState(false)
 
+    
 
     function hanldeLogIn(e){
 
@@ -97,14 +100,18 @@ function Login({logInStatus,
         
     }
     function handleLogOut(){
+        document.body.style.background= null
         return setLogInStatus(false), setShowNewUserTab(false), setCurrentUser('')
     }
     function handleNewUserButton(){
+        handleBg()
         return setShowNewUserTab(true)
     }
     
     function handleCreateAccountButton(e){
         e.preventDefault()
+        document.body.style.background= null
+        handleBg()
         const newAccount= { 
             Username: newUserName,
             Password: newPassword,
@@ -152,15 +159,29 @@ function Login({logInStatus,
         return setLogInPassword(e.target.value)
 
     }
+    function changeBackground(color) {
+        document.body.style.background = color;
+     }
 
     function handleBg() {
         setBg((bg) => !bg) ;
     }
+    const wrapper = bg ? "App dark" : "App light"
+
+if(logInStatus===true && completedForm=== false){
+    return(
+        <FormQuestions currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} allGoalOptions={allGoalOptions}/>
+    )
+    }
 
 if(logInStatus===false && showNewUserTab=== true){
-return(<> 
+    changeBackground('black')
+return(
+    
+<div className="new-user-form"> 
+
 <h2>Create a New Account</h2>
-<form className="new-form">
+<form className="#new-form">
     <label name="createNewUserName" /> Username: <label/>
     <Input onChange={handleNewUserNameChange} type="text" name="createNewUserName" />
     <br/>
@@ -170,11 +191,12 @@ return(<>
     <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
 
-</>)
+
+</div>
+)
 
 }
 
-const wrapper = bg ? "App dark" : "App light"
 
 if(logInStatus===false){
     return(
@@ -194,17 +216,20 @@ if(logInStatus===false){
     </div>
     <div>
         <h2>New User?</h2>
-        <Button onClick={handleNewUserButton, handleBg}>Register</Button>
+        <Button onClick={handleNewUserButton}>Register</Button>
          </div>
     </>
     
     )
 }
 if(logInStatus===true){
+    changeBackground('black')
     return ( <> 
+    <div>
     <Button onClick={handleLogOut}>Log Out</Button>
 
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
+    </div>
     
     </>)
 }

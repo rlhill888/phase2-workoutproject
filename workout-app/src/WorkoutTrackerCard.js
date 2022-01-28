@@ -1,9 +1,17 @@
 import React, {useState} from "react";
 
 function WorkoutTrackerCard({workout, routines, routineName}){
+    // console.log(routineName)
+
+    const [formArray, setFormArray] = useState([])
+    // console.log(formObj)
     
-  const newFormData= document.querySelectorAll(`.${routineName}`)
-  console.log(newFormData)
+//   const newFormData= document.querySelectorAll(`.${routineName}`)
+//   console.log(newFormData)
+
+    const [example, setExample]= useState('')
+
+    
     
     function handleSubmit(e){
         e.preventDefault()
@@ -32,15 +40,63 @@ function WorkoutTrackerCard({workout, routines, routineName}){
 
                 for(const key in a){
                     if(key === "time"){
-                        let workoutName= a.name
-                        let sets= 0
-                        let time=0
-                        let weight=0
-                        function handleTimeChange(e){
-                            time =e.target.value
-                            console.log(time, e)
-
+                        
+                    function handleTimeChange(e){
+                        return setFormArray((oldArray)=>{
+                            let inputValue= null
+                            let inputName= null
+                            oldArray.map((a)=>{
+                                for(const key in a){
+                                    
+                                    if(key===e.target.name){
+                                        return a[key]= e.target.value, inputName=key, inputValue= a[key]
+                                    }
+                                }
+                            })
+                            console.log(formArray)
+                            console.log(inputValue)
+                            console.log(inputName)
+                            if(inputName===e.target.name){
+                                
+                                return inputValue===e.target.value, console.log('The if statement found an input name that matches')
+                            }
+                            else{
+                            return ([...oldArray, {
+                                [e.target.name]: e.target.value
+                            }])
                         }
+                        })
+                    }
+                                    // if(specificKey===e.target.name){
+                                    //     return a[specificKey] = e.target.value
+
+                                    // }
+                                    // else{
+                                    //     return ([...oldArray, {
+                                    //         [e.target.name]: e.target.value
+                                    //     }])
+
+                                    // }
+                                
+                                
+                                // debugger
+                                // if(specificKey===e.target.name){
+                                //     return a[specificKey] = e.target.value
+
+                                // }
+                                // else{
+                                //     return ([...oldArray, {
+                                //         [e.target.name]: e.target.value
+                                //     }]), console.log(formArray)
+
+                                // }
+                                
+                                
+                                // return ([...oldArray, {
+                                //     [e.target.name]: e.target.value
+                                // }]), console.log(formArray)
+                                
+                            
                         function handleSubmit(e){
                             e.preventDefault()
                             console.log(e)
@@ -55,7 +111,7 @@ function WorkoutTrackerCard({workout, routines, routineName}){
                     -----
                 </td>
                 <td> 
-                    <input className={routineName} name={`time${a.name}`}onChange={handleTimeChange} placeholder= "time doing cardio" ></input>
+                    <input className={routineName} name={`time for ${a.name}`}onChange={handleTimeChange} placeholder= "time doing cardio" ></input>
                 </td>
             </tr>
                 )
@@ -84,13 +140,13 @@ function WorkoutTrackerCard({workout, routines, routineName}){
                             <tr key={a.name}>
                 <td> {a.name}</td>
                 <td> 
-                    <input className={routineName} onChange={handleSetsChange}placeholder= {`Number of sets of ${a.name}`} name={`sets ${a.name}`}></input>
+                    <input className={routineName} onChange={handleSetsChange}placeholder= {`Number of sets of ${a.name}`} name={`sets for ${a.name}`}></input>
                 </td>
                 <td> 
-                    <input className={routineName} onChange={handleWeightChange}placeholder= "Weight" name={`weight ${a.name}`}></input>
+                    <input className={routineName} onChange={handleWeightChange}placeholder= "Weight" name={`weight for ${a.name}`}></input>
                 </td>
                 <td> 
-                    <input className={routineName} onChange={handleRepsChange}placeholder= "reps" name={`reps ${a.name}`}></input>
+                    <input className={routineName} onChange={handleRepsChange}placeholder= "reps" name={`reps for ${a.name}`}></input>
                 </td>
             </tr>
             

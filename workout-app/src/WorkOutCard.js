@@ -10,7 +10,7 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
     if(showReps===true){
     return(
         <>
-        <div className="boo">
+        <div className="workOutCard">
         <div className="boo2">
             <h2>Workout #{id}: {workoutName} </h2>
             <img width= "200" height="200" src={workoutImage} />
@@ -25,7 +25,7 @@ function WorkOutCard({workoutName, workoutImage, currentUser, setSets, id, reps,
     if(showTime===true){
         return(
             <>
-            <div className="boo">
+            <div className="workOutCard">
             <div className="boo2">
                 <h2>Workout #{id}: {workoutName} </h2>
                 <img width= "200" height="200" src={workoutImage} />

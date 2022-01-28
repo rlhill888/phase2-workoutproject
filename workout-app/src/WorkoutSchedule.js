@@ -1,6 +1,7 @@
 import React from "react";
 import WorkoutRoutineTrackerForm from "./WorkoutRoutineTrackerForm"
 import WorkoutRoutines from "./WorkoutRoutines";
+import "./WorkoutSchedule.css"
 
 function WorkoutSchedule({currentUser}){
 
@@ -13,9 +14,14 @@ return(
     <h2>Here are your workout routines:</h2>
     
     {routinesArray.map((array) =>{ 
-            return <WorkoutRoutines routine={array} currentUser={currentUser} key={array} name={array} 
+            return (
+                <>
+            <div className="routine"> <WorkoutRoutines routine={array} currentUser={currentUser} key={array} name={array}/></div>
+            <br/>
+            </>
             
-            />
+            
+            )
             
         })}
      </>

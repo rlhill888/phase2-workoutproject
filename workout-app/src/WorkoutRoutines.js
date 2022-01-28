@@ -40,7 +40,7 @@ function WorkoutRoutines({currentUser, name}){
 
                 for(const key in a){
                     if(key==="reps"){
-                        return <WorkOutCard key={a.id} workoutName={a.name} currentUser={currentUser} workoutImage={a.Image} setSets={setSets()} id={a.id} showReps={true} reps={a.reps} showTime={false} time={a.time}/>
+                        return (<WorkOutCard key={a.id} workoutName={a.name} currentUser={currentUser} workoutImage={a.Image} setSets={setSets()} id={a.id} showReps={true} reps={a.reps} showTime={false} time={a.time}/>)
                     }
                     if(key==="time"){ 
                         return <WorkOutCard key={a.id} workoutName={a.name} currentUser={currentUser} workoutImage={a.Image} setSets={setSets()} id={a.id} showReps={false} reps={a.reps} showTime={true} time={a.time}/>

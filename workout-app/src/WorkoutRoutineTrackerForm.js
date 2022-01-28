@@ -37,19 +37,20 @@ function WorkoutRoutineTrackerForm({currentUser}){
     }
     if(formType==="Back and Biceps"){
         return(<> 
+        <div>
         <h1>Back and Biceps Form</h1>
         <WorkoutTrackerCard routineName="Back and Biceps" routines={routines["Back and Biceps"]}/>
 
         <Button onClick={()=> setFormType('none')}>Close Form</Button>
 
-        
-        
+        </div>
         </>)
     
     }
     if(formType==="Chest and Triceps"){
         return(<> 
         <h1>Chest and Triceps Form</h1>
+        <WorkoutTrackerCard routineName="Chest and Triceps" routines={routines["Chest and Triceps"]}/>
 
         <Button onClick={()=> setFormType('none')}>Close Form</Button>
 
@@ -61,6 +62,7 @@ function WorkoutRoutineTrackerForm({currentUser}){
     if(formType==="Leg Day"){
         return(<> 
         <h1>Leg Day Form</h1>
+        <WorkoutTrackerCard routineName="Leg Day" routines={routines["Leg Day"]}/>
         <Button onClick={()=> setFormType('none')}>Close Form</Button>
 
         

@@ -1,10 +1,10 @@
-/* .boo {
-    /* background-image: url("../photos/boxinggymbg.jpeg");
+ /* .boo {
+     background-image: url("../photos/boxinggymbg.jpeg");
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover; 
 
     
-    /* display: inline-block;
+     display: inline-block;
     width: 22%;
 } 
 
@@ -12,7 +12,7 @@
     background-color: black;
     display: float;
     margin: 10px;
-}  */
+}  */ */
 
 img {
     border-radius: 10%;
@@ -20,10 +20,13 @@ img {
   }
   
   img:hover {
-    -webkit-filter: brightness(30%);
+    -webkit-filter-: brightness(30%);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
+  }
+  .workOutCard{
+    background: rgba(8, 4, 4, 0.877);
   }
