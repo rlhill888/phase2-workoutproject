@@ -10,23 +10,27 @@ const Button = styled.button`
     color: yellow;
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     }
 
     &:hover {
         background: yellow;
         color: black;
+        transition-duration: 1.3s;
     }
 `;
 
 const Input = styled.input`
     && { background-color: black;
-    border-color: white;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Bebas Neue', cursive;
+  border-color: white;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Bebas Neue', cursive;
+  opacity: 0.6;
+  margin: 20px;
     }
   `;
 
@@ -174,11 +178,16 @@ if(logInStatus===true && completedForm=== false){
     )
     }
 
+if(logInStatus===true && completedForm=== false){
+        return(
+                <FormQuestions currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} allGoalOptions={allGoalOptions}/>
+            )
+            }
+
 if(logInStatus===false && showNewUserTab=== true){
-    changeBackground('black')
+
 return(
-    
-<div className="new-user-form"> 
+<div className="createaccountdiv"> 
 
 <h2>Create a New Account</h2>
 <form className="#new-form">
@@ -191,9 +200,8 @@ return(
     <input className="submit" onClick={handleCreateAccountButton}type="submit" value= "Create Account"/>
 </form>
 
+</div>)
 
-</div>
-)
 
 }
 
@@ -201,8 +209,9 @@ return(
 if(logInStatus===false){
     return(
         <>
-        <div className={wrapper}>
-      <h1>Workout 4 Me</h1>
+        <div className="wrapper" style={{ backgroundImage: "url(../photos/gym-time-exercise.gif" }}>
+        
+      <img src={require ("./mainlogo.png")} alt="mainlogo" width="300" height="300" />
       <h2>The expertise you need to achieve your fitness goals</h2>
       <form className="mainform">
          <label>
@@ -215,7 +224,9 @@ if(logInStatus===false){
       <Button onClick= {hanldeLogIn} type="submit">Log In</Button>
     </div>
     <div>
-        <h2>New User?</h2>
+        
+        <h2 className="newusertitlequestion">New User?</h2>
+
         <Button onClick={handleNewUserButton}>Register</Button>
          </div>
     </>
@@ -223,15 +234,14 @@ if(logInStatus===false){
     )
 }
 if(logInStatus===true){
-    changeBackground('black')
-    return ( <> 
-    <div>
+    return ( <div className="logoutdiv"> 
+
     <Button onClick={handleLogOut}>Log Out</Button>
 
     <MainPage allGoalOptions={allGoalOptions} currentUser={currentUser} completedForm={completedForm} setCompletedForm={setCompletedForm} />
     </div>
     
-    </>)
+    </div>)
 }
 }
 

@@ -1,20 +1,16 @@
 .routinetitle {
     color: yellow;
+    text-align: center;
+    width: 500px;
 }
 
 .column {
     float: left;
     width: 33.33%;
-  }
   
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .routine {
-    background-color: blue;
-
+    background-image: url("../photos/blurorangebg.jpeg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+   
   }

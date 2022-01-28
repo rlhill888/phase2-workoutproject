@@ -1,16 +1,69 @@
 .tea {
     background-color: black;
+    background-image: url("../photos/squatrack.jpg");
+    background-size: 90%;
+    padding-top: 200px;
+    /* padding-left: 200px;
+    padding-right: 200px; */
+    padding-bottom: 500px;
 }
 
-form {
+.form {
+    background-color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20pt;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10px;
     text-align: left;
-    padding-left: 25%;
-    padding-right: 25%;
 }
 
-input {
+/* label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+} */
+.inputbox {
+
+    display: inline-block;
+    font-size: 20pt;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
     margin: 20px;
+    width: 250px;
+
+        background-color: black;
+        border-color: white;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 20pt;
+        font-family: 'Bebas Neue', cursive;
+        opacity: 0.6;
 }
+
+.inputbox2 {
+
+    display: inline-block;
+    font-size: 20pt;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    margin: 20px 5px 20px 20px;
+    width: 50px;
+
+        background-color: black;
+        border-color: white;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 20pt;
+        font-family: 'Bebas Neue', cursive;
+        opacity: 0.6;
+}
+
 
 .submit {
     background: black;
@@ -24,5 +77,34 @@ input {
   .submit:hover {
     background: yellow;
     color: black;
+    transition: 0.3s;
   
   }
+
+  .submitdiv {
+    background-color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20pt;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  /* .based {
+      text-align:
+  } */
+
+  .firsttimetitle {
+      font-size: 35pt;
+      color: yellow;
+      margin: 50px;
+  }
+  
+  .radio {
+      margin-left: 30%;
+  }
+
