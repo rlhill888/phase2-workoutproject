@@ -2,3 +2,17 @@
     font-size: 30pt;
     color: yellow;
 }
+.mealPlanCard{
+    background-image: url('../photos/istockphoto-505020568-612x612.jpeg');
+    
+}
+.mealMacros{
+    background-color: black;
+    color: yellow;
+    border: black;
+    border-width: 400px;
+    text-emphasis-color: yellow;
+}
+.text{
+    color: yellow;
+}

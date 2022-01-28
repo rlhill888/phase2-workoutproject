@@ -36,7 +36,7 @@ if(macrosButton=== false)
 if(macrosButton===true){
     return(
         <>
-        <div>
+        <div className='mainPage'>
         <h2>What is a macro?</h2>
         <p>First and foremost, knowing what you’re counting is super important, right?<p>Well, “macro” is short for macronutrient. What’s a macronutrient? They’re the three categories of nutrients you eat the most and provide you with most of your energy: protein, carbohydrates and fats.</p> So when you’re counting your macros, you’re counting the grams of proteins, carbs or fat that you’re consuming.</p>
         <h2>Why do people count macros?</h2>

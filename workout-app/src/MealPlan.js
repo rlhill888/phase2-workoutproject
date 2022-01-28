@@ -18,9 +18,7 @@ let fat= 0;
 let activityLevel= 0
 
 
-function handleMacrosButton(){
-    console.log('click')
-}
+
 if(goals===toneMuscle){
     if(data.activityLevel=== "Little or no exercise"){
         activityLevel=1.3
@@ -41,30 +39,30 @@ if(goals===toneMuscle){
     fat= Math.floor(calories*.3/9)
     return(
         <>
-
-        <h1 className="mealplantitle">Here is your meal plan when it comes to toning muscle and body definition :</h1>
+        <h1 className="mealplantitle">Here is your meal plan when it comes to gaining toned muscles :</h1>
 
         <br/>
-        <div>
-        <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
-        <h2>Here are your Macros :</h2>
 
+        <div className="mealPlanCard">
+            <h2 className='text'>Here are your Macros</h2>
 
         <MacrosButton />
-
         <br/>
-        <h2>In order to loose weight, you should try to consume these daily macros to achieve your goals :</h2>
+        <h2 className='text'>In order to gain mucle mass and tone muscle, you should try to consume these daily macros to achieve your goals</h2>
+
+        <div className='mealMacros'>
+
         <h3>Calories: {calories}</h3>
         <h3>Carbs: {carbs} grams</h3>
         <h3>Protein: {protein} grams</h3>
         <h3>Fat: {fat} grams</h3>
-                    
-
-
+        </div>
+        
+        
         </div>
        
-        </>
-    )
+        </>)
+    
 }
 if(goals===looseWEight){
     if(data.activityLevel=== "Little or no exercise"){
@@ -94,8 +92,8 @@ if(goals===looseWEight){
 
         {/* <p>paragraph explaining what foods to eat, and what foods to stay away from</p> */}
 
-        <h2>Here are your Macros :</h2>
 
+        <h2 className='text'>Here are your Macros</h2>
         <MacrosButton />
 
         <br/>
@@ -135,18 +133,27 @@ if(goals===gainMuscleMass){
         <h1 className="mealplantitle">Here is your meal plan when it comes to gaining muscle mass :</h1>
 
         <br/>
+        <div className="mealPlanCard">
+            <h2 className='text'>Here are your Macros</h2>
 
-        <p>paragraph explaining what foods to eat, and what foods to stay away from</p>
-
-        <h2>Here are your Macros :</h2>
-
-       <MacrosButton />
+        <MacrosButton />
         <br/>
-        <h2>In order to gain mucle mass, you should try to consume these daily macros to achieve your goals :</h2>
+        <h2 className='text'>In order to gain mucle mass, you should try to consume these daily macros to achieve your goals</h2>
+
+
+        <div className='mealMacros'>
+
         <h3>Calories: {calories}</h3>
         <h3>Carbs: {carbs} grams</h3>
         <h3>Protein: {protein} grams</h3>
         <h3>Fat: {fat} grams</h3>
+        </div>
+        
+        
+        </div>
+        
+
+       
         </>
     )
 }
@@ -173,18 +180,21 @@ if(goals===gainWeight){
     return(
         <>
 
-        <h1 className="mealplantitle" >Here is your meal plan when it comes to gaining weight:</h1>
+
+        <h1 className='text'>Here is your meal plan when it comes to gaining weight:</h1>
 
         <br/>
 
-        <h2>Here are your Macros :</h2>
+        <h2 className='text'>Here are your Macros</h2>
 
         <br/>
         <MacrosButton />
 
         <br/>
-        <h2>In order to gain weight, you should try to consume these daily macros to achieve your goals :</h2>
-        <h3>Calories: {calories}</h3>
+
+        <h2>In order to gain weight, you should try to consume these daily macros to achieve your goals</h2>
+        <h3 className='mealMacros'>Calories: {calories}</h3>
+
         <h3>Carbs: {carbs} grams</h3>
         <h3>Protein: {protein} grams</h3>
         <h3>Fat: {fat} grams</h3>
